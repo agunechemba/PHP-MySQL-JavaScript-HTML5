@@ -1,0 +1,2235 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PHP, MySQL, JavaScript &amp; HTML5 — All-in-One</title>
+<link rel="icon" type="image/svg+xml" href="https://pph.name.ng/pphlogo.svg">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="reading-progress"><div class="reading-progress-fill"></div></div>
+<div class="page-indicator">Page 1</div>
+<div class="page-hint">← → arrow keys to turn pages</div>
+
+<!-- ============================================================
+     FRONT COVER
+     ============================================================ -->
+<section class="book-page cover-page active" id="cover">
+  <div class="cover-content">
+    <p class="cover-series">All-in-One</p>
+    <h1>PHP, MySQL, JavaScript &amp; HTML5</h1>
+    <p class="cover-subtitle">A complete course in the languages that power the web</p>
+    <p class="cover-author">By Steve Suehring and Janet Valade</p>
+    <div class="cover-note">
+      Seven books. Thirty chapters. The languages of the web.<br>
+      Install the server. Build the page. Style the page. Script the behavior. Store the data. Ship the application.
+    </div>
+    <div class="book-nav">
+      <button class="nav-button" data-nav="next">Begin the Journey →</button>
+    </div>
+    <div class="cover-credit">
+      Refactored &amp; illustrated by<br>
+      <a href="https://agunechemba.name.ng" target="_blank" rel="noopener">Agunechemba Ekene</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TABLE OF CONTENTS
+     ============================================================ -->
+<section class="book-page toc-page" id="toc">
+  <div class="chapter-header">
+    <p class="chapter-part">Contents</p>
+    <h2>What Lies Ahead</h2>
+    <p class="chapter-tagline">Seven books, one journey through the languages of the web.</p>
+  </div>
+
+  <div class="toc-part">
+    <h3>Book One · Getting Started with PHP &amp; MySQL</h3>
+    <ol>
+      <li><a href="#ch-understanding-languages">Understanding the Languages of the Web</a></li>
+      <li><a href="#ch-installing-web-server">Installing a Web Server</a></li>
+      <li><a href="#ch-installing-php">Installing PHP</a></li>
+      <li><a href="#ch-setting-up-mysql">Setting Up MySQL</a></li>
+      <li><a href="#ch-xampp">Setting Up Your Web Development Environment with XAMPP</a></li>
+    </ol>
+  </div>
+
+  <div class="toc-part">
+    <h3>Book Two · HTML and CSS</h3>
+    <ol start="6">
+      <li><a href="#ch-basic-page-html">Creating a Basic Page with HTML</a></li>
+      <li><a href="#ch-adding-style-css">Adding Style with CSS</a></li>
+      <li><a href="#ch-creating-styling-forms">Creating and Styling Web Forms</a></li>
+    </ol>
+  </div>
+
+  <div class="toc-part">
+    <h3>Book Three · JavaScript</h3>
+    <ol start="9">
+      <li><a href="#ch-javascript-basics">Understanding JavaScript Basics</a></li>
+      <li><a href="#ch-building-javascript-program">Building a JavaScript Program</a></li>
+      <li><a href="#ch-adding-jquery">Adding jQuery</a></li>
+      <li><a href="#ch-reacting-events">Reacting to Events with JavaScript and jQuery</a></li>
+      <li><a href="#ch-troubleshooting-js">Troubleshooting JavaScript Programs</a></li>
+    </ol>
+  </div>
+
+  <div class="toc-part">
+    <h3>Book Four · PHP</h3>
+    <ol start="14">
+      <li><a href="#ch-php-basics">Understanding PHP Basics</a></li>
+      <li><a href="#ch-building-php-scripts">Building PHP Scripts</a></li>
+      <li><a href="#ch-php-os">PHP and Your Operating System</a></li>
+      <li><a href="#ch-oop">Object-Oriented Programming</a></li>
+      <li><a href="#ch-php-security">Considering PHP Security</a></li>
+      <li><a href="#ch-sessions">Tracking Visitors with Sessions</a></li>
+    </ol>
+  </div>
+
+  <div class="toc-part">
+    <h3>Book Five · MySQL</h3>
+    <ol start="20">
+      <li><a href="#ch-introducing-mysql">Introducing MySQL</a></li>
+      <li><a href="#ch-administering-mysql">Administering MySQL</a></li>
+      <li><a href="#ch-designing-database">Designing and Building a Database</a></li>
+      <li><a href="#ch-using-database">Using the Database</a></li>
+      <li><a href="#ch-communicating-database">Communicating with the Database from PHP Scripts</a></li>
+    </ol>
+  </div>
+
+  <div class="toc-part">
+    <h3>Book Six · Web Applications</h3>
+    <ol start="25">
+      <li><a href="#ch-improving-php">Improving Your PHP Programs</a></li>
+      <li><a href="#ch-web-service">Creating and Using a Web Service</a></li>
+      <li><a href="#ch-validating-forms">Validating Web Forms with JavaScript and PHP</a></li>
+      <li><a href="#ch-members-only">Building a Members-Only Website</a></li>
+    </ol>
+  </div>
+
+  <div class="toc-part">
+    <h3>Book Seven · PHP and Templates</h3>
+    <ol start="29">
+      <li><a href="#ch-configuring-php">Configuring PHP</a></li>
+      <li><a href="#ch-templating-system">Building a Templating System</a></li>
+    </ol>
+  </div>
+
+  <div class="toc-part">
+    <h3>After the Journey</h3>
+    <ol start="31">
+      <li><a href="#glossary">The Little Dictionary</a></li>
+      <li><a href="#back">A Note for the Reader</a></li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Back to Cover</button>
+    <button class="nav-button" data-nav="next">Welcome →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     INTRODUCTION
+     ============================================================ -->
+<section class="book-page chapter-page" id="intro">
+  <div class="chapter-header">
+    <p class="chapter-part">Welcome</p>
+    <h2>Hello, Future Web Developer</h2>
+    <p class="chapter-tagline">A complete course in the languages that make the web work.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Although web development has changed over the years, the actual core details of creating a web page have stayed the same. You create a document and put it out on the web for people to view. To do that, you need to learn the special languages that are spoken on the web — not the cryptic shorthand of text messages, but the languages used to create web documents and sites.</p>
+
+    <p>This book looks at many aspects of web development: the language used to make web pages, the ways to make those pages look good, the ways to make them accept information from visitors, and the programs that build other pages. It's all broken into manageable pieces so you can consume the information at your own pace.</p>
+
+    <p>The book is divided into seven minibooks, each focused on a distinct layer of the web. <strong>Book One</strong> gets the tools installed — the web server, PHP, and MySQL. <strong>Book Two</strong> covers HTML and CSS, the two languages of every web page. <strong>Book Three</strong> covers JavaScript, the language that makes pages come alive. <strong>Book Four</strong> covers PHP, the language of server-side programming. <strong>Book Five</strong> covers MySQL, the database that stores your data. <strong>Book Six</strong> puts all the pieces together into real applications. <strong>Book Seven</strong> closes with configuration and templating.</p>
+
+    <p>The code examples in this book assume you have a computer with a recent version of Windows, Mac OS X, or Linux on it. You don't need to know anything about programming or creating web pages, but you should be comfortable moving around on the computer. Words like files, directories, editor, browser, and installing software should already be familiar.</p>
+
+    <p>This is a book meant to be read with your fingers on the keyboard. Type every example. Save it. Reload the browser. Break it. Fix it. Make it your own. The loop — <em>edit, save, reload, repeat</em> — is the whole secret of web development.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Before You Go</h3>
+    <ul>
+      <li>Seven minibooks cover the technologies of the web, each building on the last.</li>
+      <li>You can read the book in any order, but the early chapters install software later chapters assume.</li>
+      <li>The code examples are meant to be typed, not just read.</li>
+      <li>Every programmer, every day, writes mistakes. That's how we learn.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Warm-Up Questions</h3>
+    <ol>
+      <li>What's one website you use every day? Can you guess how it might be built?</li>
+      <li>Which do you think is easier: HTML, CSS, or JavaScript? Why?</li>
+      <li>Have you ever installed software on your computer? What did you install?</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Contents</button>
+    <button class="nav-button" data-nav="next">Enter Book One →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     BOOK 1 DIVIDER — GETTING STARTED WITH PHP & MYSQL
+     ============================================================ -->
+<section class="book-page cover-page part-page" id="book-one">
+  <div class="cover-content">
+    <p class="part-number">Book One</p>
+    <h1>Getting Started with PHP &amp; MySQL</h1>
+    <p class="part-desc">Understanding the languages of the web, then installing the web server, PHP, and MySQL that everything else depends on.</p>
+    <div class="book-nav">
+      <button class="nav-button" data-nav="next">Begin Chapter One →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 1 — UNDERSTANDING THE LANGUAGES OF THE WEB
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-understanding-languages">
+  <div class="chapter-header">
+    <p class="chapter-part">Book One · Getting Started with PHP &amp; MySQL · Chapter 1</p>
+    <h2>Understanding the Languages of the Web</h2>
+    <p class="chapter-tagline">How the web works, and what each of its languages is for.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>The World Wide Web is a large group of computers, known as <strong>servers</strong>, that exist to provide information when it's requested. The information is requested by software called a <strong>web browser</strong>. This is the client-server model: the browser is the client, the server provides the information. Web servers and browsers talk to each other using a protocol called <strong>HTTP</strong>, which is stateless — it doesn't remember what it was doing from one request to the next.</p>
+
+    <p>Every website has a unique address called an <strong>IP address</strong> — four numbers between 0 and 255, separated by dots. Because IP addresses are hard to remember, the <strong>Domain Name System (DNS)</strong> translates friendly names like <code>www.example.com</code> into the numeric address the computer needs.</p>
+
+    <p>Web pages themselves have three primary languages. <strong>HTML</strong> provides the structure — the headings, paragraphs, images, and links. <strong>CSS</strong> changes the layout and appearance — fonts, colors, spacing, and positioning. <strong>JavaScript</strong> provides behaviour — what happens when you click a button or submit a form. On the server side, <strong>PHP</strong> builds web pages dynamically, often reading data from a <strong>MySQL</strong> database to decide what to send back.</p>
+
+    <p>PHP and MySQL are a popular pair for building dynamic web applications. They're free, web-oriented, easy to use, fast, and well-supported. Apache — the most widely used web server — receives each request and, when the file is PHP, hands it to the PHP processor before sending the result to the browser.</p>
+
+    <pre class="code-example"><code>&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;My First Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello, world!&lt;/h1&gt;
+  &lt;p&gt;This page is written in HTML.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    <p>You don't need fancy software to build a page. You need a text editor to write the code and a browser to view the result. That loop — edit, save, reload — is the whole secret of web development.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>The web runs on the client-server model, connected by HTTP.</li>
+      <li>DNS translates domain names into IP addresses.</li>
+      <li>HTML structures, CSS styles, JavaScript scripts.</li>
+      <li>PHP and MySQL build dynamic pages on the server.</li>
+      <li>Apache is the web server that ties them all together.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Type the sample HTML into a new file, save it as <code>index.html</code>, and open it in your browser.</li>
+      <li>Change the heading to your own name and reload the page.</li>
+      <li>Add a second paragraph below the first.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Book One</button>
+    <button class="nav-button" data-nav="next">Chapter Two →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 2 — INSTALLING A WEB SERVER
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-installing-web-server">
+  <div class="chapter-header">
+    <p class="chapter-part">Book One · Getting Started with PHP &amp; MySQL · Chapter 2</p>
+    <h2>Installing a Web Server</h2>
+    <p class="chapter-tagline">Apache — the software that sends pages to the world.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Before you can install PHP or MySQL, you need a web server. Apache <code>httpd</code> is the most popular choice: free, open source, cross-platform, and stable. It's available in three versions — 2.0, 2.2, and 2.4 — and all three are still supported. Check for an existing installation by typing <code>http://localhost</code> into your browser. If a page appears, a web server is already running.</p>
+
+    <p>If you're using a hosted website or a company server, you don't need to install Apache at all. If you're developing locally, you do. Windows doesn't come with Apache; Linux usually includes it; Macs include it but it may not be started. On any platform, the all-in-one kits — <strong>XAMPP</strong>, <strong>WAMPServer</strong>, <strong>MAMP</strong> — bundle Apache, PHP, and MySQL into one convenient installer.</p>
+
+    <p>Once Apache is installed, you control it with the <code>apachectl</code> script on Linux, Unix, and Mac, or through the Start menu on Windows. To start: <code>/usr/local/apache/bin/apachectl start</code>. To stop: <code>apachectl stop</code>. To restart (which you need after editing configuration): <code>apachectl restart</code>. On Windows with a service installation, Apache starts automatically when the computer boots.</p>
+
+    <p>Apache reads its configuration from a file called <code>httpd.conf</code>. The two directives you'll most often change: <code>DocumentRoot</code>, which tells Apache where to find web page files, and <code>Listen</code>, which tells it which port to accept connections on (default 80). Remember to restart Apache after any change — the new settings take effect only at the next start.</p>
+
+    <pre class="code-example"><code>DocumentRoot "C:/Program Files/Apache Group/Apache/htdocs"
+Listen 80</code></pre>
+
+    <p>To confirm the installation is working, type <code>httpd -v</code> to see the version and <code>httpd -l</code> to see the modules. If both commands return sensible output, Apache is installed and ready.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Apache <code>httpd</code> is the most popular free web server, in versions 2.0, 2.2, and 2.4.</li>
+      <li>All-in-one kits (XAMPP, WAMPServer, MAMP) bundle Apache, PHP, and MySQL.</li>
+      <li>Control Apache with <code>apachectl</code> on Unix/Mac, or through Windows Services.</li>
+      <li>Configure via <code>httpd.conf</code> — change <code>DocumentRoot</code> and <code>Listen</code>; restart after.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Visit <code>http://localhost</code>. Is a page displayed? What does it say?</li>
+      <li>Find <code>httpd.conf</code> on your system. What is its <code>DocumentRoot</code> value?</li>
+      <li>Run <code>httpd -v</code> from a command prompt. What version of Apache do you have?</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter One</button>
+    <button class="nav-button" data-nav="next">Chapter Three →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 3 — INSTALLING PHP
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-installing-php">
+  <div class="chapter-header">
+    <p class="chapter-part">Book One · Getting Started with PHP &amp; MySQL · Chapter 3</p>
+    <h2>Installing PHP</h2>
+    <p class="chapter-tagline">Getting the server-side language ready to run.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>PHP may already be installed — some Linux and Mac distributions include it. Windows doesn't come with PHP. To check, search for files named <code>php*</code> on your hard drive. If you find them, the next question is whether PHP is activated and configured. To find out, create a test file with a call to <code>phpinfo()</code> and load it through your web server.</p>
+
+    <p>Download PHP from <code>www.php.net</code>. If you're installing for the first time and building your first website, download PHP 5 (or PHP 6, if it's available by the time you read this). PHP 5 and 6 are significantly different from PHP 4; if you're maintaining an existing site, check its version carefully.</p>
+
+    <p>On Unix, Linux, and Mac, install PHP as an Apache module — it's faster and more secure than running it as a standalone interpreter. Download the source, unpack the tarball, run <code>./configure --with-apxs2</code> (plus any other options you need), then <code>make</code> and <code>make install</code>. The configure step checks that the software PHP needs is present, and tells you if something is missing.</p>
+
+    <p>On Windows, extract the Zip file into <code>c:\php</code> — not <code>Program Files</code>, because the space in the path causes problems. Then open <code>php.ini</code> (copy <code>php.ini-dist</code> to <code>php.ini</code> if it doesn't exist) and set your options. You must also configure Apache to recognise PHP files: uncomment the <code>LoadModule php5_module</code> line and add <code>AddType application/x-httpd-php .php</code> in <code>httpd.conf</code>.</p>
+
+    <p>Configure PHP through <code>php.ini</code>. Important settings: turn off magic quotes if you're on PHP 5 or earlier, set your local time zone, and on Windows with IIS, turn off <code>cgi.force_redirect</code>. Save the file, then restart Apache so it picks up the new settings.</p>
+
+    <pre class="code-example"><code>&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;PHP Test&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;This is an HTML line&lt;/p&gt;
+  &lt;?php echo "&lt;p&gt;This is a PHP line&lt;/p&gt;"; phpinfo(); ?&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    <p>Save this as <code>test.php</code> in your Document Root. Then visit <code>http://localhost/test.php</code> through your browser — never by selecting File → Open. If you see two lines of output and a long table of PHP settings, PHP is installed and working. If you see only the HTML, PHP isn't being processed.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>PHP is often already installed on Linux and Mac; on Windows you install it yourself.</li>
+      <li>On Unix, install PHP as an Apache module for speed and security.</li>
+      <li>On Windows, install into <code>c:\php</code> and configure <code>httpd.conf</code>.</li>
+      <li>Test with <code>test.php</code> and <code>phpinfo()</code>.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Create <code>test.php</code> with the sample code and load it through your browser. What do you see?</li>
+      <li>In the <code>phpinfo()</code> output, find the <code>Configuration File Path</code>. Where does PHP look for <code>php.ini</code>?</li>
+      <li>Change <code>date.timezone</code> in <code>php.ini</code>, restart Apache, and reload the test page.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Two</button>
+    <button class="nav-button" data-nav="next">Chapter Four →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 4 — SETTING UP MYSQL
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-setting-up-mysql">
+  <div class="chapter-header">
+    <p class="chapter-part">Book One · Getting Started with PHP &amp; MySQL · Chapter 4</p>
+    <h2>Setting Up MySQL</h2>
+    <p class="chapter-tagline">The database that stores what your application needs.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>MySQL is the database system that will hold your application's data. It may already be installed on Linux and Mac; Windows doesn't include it. To check whether MySQL is running on Windows, look in Services. On Linux, Unix, and Mac, type <code>ps -ax</code> and look for a process called <code>mysqld</code>. If MySQL is installed but not running, start it — with the Services panel on Windows, or <code>service mysqld start</code> on Linux.</p>
+
+    <p>Download MySQL from <code>www.mysql.com</code>. Community Server is free and appropriate for websites; Enterprise Server is a paid subscription. On Windows, use the MSI installer and choose Developer Machine when prompted for a configuration type. On Linux, install from RPM files or from your distribution's package manager. On Mac, use the DMG file, or compile from source if you need features the DMG doesn't include.</p>
+
+    <p>Configure MySQL through <code>my.ini</code> (Windows) or <code>my.cnf</code> (Unix, Linux, Mac). Three directives you might adjust: the port (3306 by default), <code>basedir</code> (where MySQL is installed), and <code>datadir</code> (where the databases are stored). On Windows, MySQL runs as a service and starts automatically when the computer boots. On Linux and Mac, a script called <code>mysql.server</code> starts and stops it.</p>
+
+    <p>Activate MySQL support in PHP. On Windows, uncomment <code>extension=php_mysql.dll</code> (or <code>php_mysqli.dll</code>) in <code>php.ini</code>, and make sure the DLLs are on the system path. On Linux and Mac, MySQL support must be compiled in at install time with <code>--with-mysql</code> or <code>--with-mysqli</code>.</p>
+
+    <pre class="code-example"><code>[mysqld]
+port = 3306
+basedir = C:/Program Files/MySQL/MySQL Server 5.0/
+datadir = C:/Program Files/MySQL/MySQL Server 5.0/Data/</code></pre>
+
+    <p>Test MySQL by connecting with the <code>mysql</code> client: type <code>mysql -u root -p</code>, enter your password, and you'll see the MySQL monitor prompt. Type <code>quit</code> to exit. If you see the welcome message, MySQL is installed and working.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>MySQL is a free, open-source RDBMS — Community Server is the version for websites.</li>
+      <li>Configure via <code>my.ini</code> or <code>my.cnf</code>.</li>
+      <li>On Windows, MySQL runs as a service; on Linux/Mac, use <code>mysql.server</code>.</li>
+      <li>Activate MySQL support in PHP with <code>extension=php_mysql.dll</code> on Windows, or <code>--with-mysql</code> at compile time on Unix.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Find the MySQL configuration file on your system. What is its <code>port</code> setting?</li>
+      <li>Connect to MySQL with the <code>mysql</code> client. What version does the welcome message report?</li>
+      <li>Run <code>phpinfo()</code> and look for a MySQL section. Is MySQL support activated?</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Three</button>
+    <button class="nav-button" data-nav="next">Chapter Five →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 5 — SETTING UP XAMPP
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-xampp">
+  <div class="chapter-header">
+    <p class="chapter-part">Book One · Getting Started with PHP &amp; MySQL · Chapter 5</p>
+    <h2>Setting Up Your Web Development Environment with XAMPP</h2>
+    <p class="chapter-tagline">Apache, PHP, and MySQL in one installer — the fastest path to a working environment.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>XAMPP is a popular all-in-one kit that installs Apache, MySQL, and PHP in one procedure. It also installs phpMyAdmin, a browser-based tool for managing MySQL databases. It's available for Windows, Mac, and several Linux distributions, and is intended as a <em>development</em> environment — it is configured to be as open as possible, and is not secure for production use without tightening.</p>
+
+    <p>Download XAMPP for Windows from <code>www.apachefriends.org</code>. On Windows Vista, 7, or 8, don't install into <code>Program Files</code> — Windows protects that folder, and PHP has trouble with the space in the path. Accept the default <code>c:\xampp</code>. During installation, select <em>Install Apache as Service</em> and <em>Install MySQL as Service</em>, so both start automatically when the computer boots.</p>
+
+    <p>The XAMPP Control Panel shows the status of Apache, MySQL, and other components. You can use it to start and stop each one individually, which is handy when you need to restart after a configuration change. The panel lives in the system tray while it's running. The green "Running" indicator next to Apache and MySQL is the sign that your environment is ready.</p>
+
+    <p>Test the installation by visiting <code>http://localhost</code> — you should see the XAMPP welcome page. Click <em>Status</em> to see which components are activated. To test PHP, create <code>test.php</code> in <code>c:\xampp\htdocs</code> containing a call to <code>phpinfo()</code> and visit <code>http://localhost/test.php</code>. Scroll down to confirm a MySQL section is present — that means the connection between PHP and MySQL is working.</p>
+
+    <pre class="code-example"><code>date.timezone = America/Los_Angeles
+upload_max_filesize = 100M
+memory_limit = 256M</code></pre>
+
+    <p>The XAMPP configuration files live in the XAMPP directory, not in the system directories the individual software's documentation mentions. PHP's is <code>c:\xampp\php\php.ini</code>; Apache's is <code>c:\xampp\apache\conf\httpd.conf</code>; MySQL's is <code>c:\xampp\mysql\bin\my.cnf</code>. Restart Apache from the Control Panel after editing <code>php.ini</code>. If something goes wrong, the standard fix is to uninstall XAMPP (after stopping the services) and reinstall.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>XAMPP bundles Apache, MySQL, PHP, and phpMyAdmin in one installer.</li>
+      <li>It's a development environment, not a production one — tighten security before going live.</li>
+      <li>Install into <code>c:\xampp</code>; install services so they start automatically.</li>
+      <li>Edit configuration files in the XAMPP directory, then restart Apache.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Visit <code>http://localhost</code>. What XAMPP page appears? Click the Status link and check which components are activated.</li>
+      <li>Create <code>c:\xampp\htdocs\test.php</code> with a <code>phpinfo()</code> call and load it in your browser.</li>
+      <li>Change a setting in <code>c:\xampp\php\php.ini</code>, save, and restart Apache from the Control Panel.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Four</button>
+    <button class="nav-button" data-nav="next">Enter Book Two →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     BOOK 2 DIVIDER — HTML AND CSS
+     ============================================================ -->
+<section class="book-page cover-page part-page part-two" id="book-two">
+  <div class="cover-content">
+    <p class="part-number">Book Two</p>
+    <h1>HTML and CSS</h1>
+    <p class="part-desc">The two languages of every web page — building the structure with HTML, then styling it with CSS, and finally wrapping both around a working form.</p>
+    <div class="book-nav">
+      <button class="nav-button" data-nav="next">Begin Chapter Six →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 6 — CREATING A BASIC PAGE WITH HTML
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-basic-page-html">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Two · HTML and CSS · Chapter 6</p>
+    <h2>Creating a Basic Page with HTML</h2>
+    <p class="chapter-tagline">Structure, semantics, and the first page you'll actually build.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>At its heart, HTML is just a document — much like a document you'd create in a word processor. But where a word processor uses its own proprietary format, HTML uses a plain text format that every web browser can read. You create HTML with a text editor; you view the result in a browser. Both are just programs.</p>
+
+    <p>An HTML document has three parts. The <strong>root element</strong> (<code>&lt;html&gt;</code>) wraps the whole thing. The <strong>head section</strong> contains information about the page — the title, the character set, links to stylesheets and scripts. The <strong>body section</strong> contains the visible content — headings, paragraphs, images, links.</p>
+
+    <p>HTML5 uses a very simple doctype: <code>&lt;!doctype html&gt;</code>. This tells the browser to follow the HTML5 rules. Older doctypes were long and complicated; HTML5's is refreshingly short.</p>
+
+    <p>Inside the body, use the right element for the job. <code>&lt;p&gt;</code> for paragraphs. <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code> for headings, in descending order of importance. <code>&lt;div&gt;</code> for a generic block container. <code>&lt;span&gt;</code> for a generic inline container. <code>&lt;br&gt;</code> for a line break. <code>&lt;hr&gt;</code> for a thematic break. <code>&lt;a href="..."&gt;</code> for a link. <code>&lt;img src="..." alt="..."&gt;</code> for an image. This is <strong>semantic markup</strong> — using the right element for the right job, which helps search engines and assistive technology understand your page.</p>
+
+    <pre class="code-example"><code>&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;My First Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;My Web Page&lt;/h1&gt;
+  &lt;p&gt;Welcome to my web page.&lt;/p&gt;
+  &lt;h2&gt;My Books&lt;/h2&gt;
+  &lt;p&gt;You can find information about my books here.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    <p>Lists come in two flavours: <code>&lt;ul&gt;</code> for bulleted (unordered) lists, and <code>&lt;ol&gt;</code> for numbered (ordered) lists. Inside, each item is wrapped in <code>&lt;li&gt;</code>. Tables use <code>&lt;table&gt;</code> with rows (<code>&lt;tr&gt;</code>), header cells (<code>&lt;th&gt;</code>), and data cells (<code>&lt;td&gt;</code>). When you're done, validate the page with the W3C Markup Validation Service at <code>validator.w3.org</code> — valid HTML doesn't guarantee a beautiful page, but it guarantees the browser can parse your page correctly.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>An HTML document has a root, a head, and a body.</li>
+      <li>HTML5 uses the simple <code>&lt;!doctype html&gt;</code> doctype.</li>
+      <li>Use the right semantic element for each piece of content.</li>
+      <li>Lists (<code>ul</code>, <code>ol</code>, <code>li</code>) and tables (<code>table</code>, <code>tr</code>, <code>th</code>, <code>td</code>) structure tabular and enumerated data.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Build the sample page in your editor and open it in your browser.</li>
+      <li>Add an unordered list of three favourite things below the second paragraph.</li>
+      <li>Validate your page at <code>validator.w3.org</code>. Did it pass?</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Book Two</button>
+    <button class="nav-button" data-nav="next">Chapter Seven →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 7 — ADDING STYLE WITH CSS
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-adding-style-css">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Two · HTML and CSS · Chapter 7</p>
+    <h2>Adding Style with CSS</h2>
+    <p class="chapter-tagline">Selectors, fonts, colors, and the layouts that make a page look like a page.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>CSS complements HTML by providing a look and feel to web pages. HTML gives you a structure; CSS decides what that structure looks like. It can change colors, fonts, spacing, borders, backgrounds — even the layout of the whole page. It's the difference between a document and a design.</p>
+
+    <p>You connect CSS to a page in three ways. <strong>Inline</strong> styles go directly on an element via the <code>style</code> attribute. <strong>Internal</strong> style sheets live in a <code>&lt;style&gt;</code> element in the head. <strong>External</strong> style sheets live in a separate <code>.css</code> file, linked with a <code>&lt;link&gt;</code> element. External is the most reusable — one file, many pages, one edit to change them all.</p>
+
+    <p>Selectors target elements. Use the element name (<code>div</code>) to select every element of that kind, a class (<code>.boldText</code>) to select every element with that class attribute, an id (<code>#myName</code>) to select the one element with that id, or a combination (<code>div span</code>) to target elements based on their position in the page's hierarchy.</p>
+
+    <p>Then the visual properties. <code>font-family</code> sets the typeface, with a list of fallbacks. <code>font-size</code> sets the size, using percentages or ems so users can scale. <code>color</code> sets text color, using a name or hex code. <code>border</code> draws a border — thickness, style, color in one rule. <code>list-style-type</code> changes bullets or removes them. <code>background-color</code> and <code>background-image</code> set what's behind the content. <code>width</code>, <code>margin</code>, <code>padding</code>, and <code>float</code> control the layout.</p>
+
+    <pre class="code-example"><code>body {
+  font-family: arial, helvetica, sans-serif;
+  font-size: 90%;
+}
+.boldText {
+  font-weight: bold;
+}
+span {
+  font-style: italic;
+  color: #0000FF;
+}
+.addBorder {
+  border: 3px double black;
+  padding: 5px;
+}</code></pre>
+
+    <p>With those rules, you can build a single-column layout (a container centred with <code>margin: 0 auto</code>), a two-column layout (a content column floated left, a sidebar floated right), and full pages with headers, menus, footers, and content. Once you've set up your CSS, changing the look of every page on the site takes one edit.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>CSS can be inline, internal, or external — external is most reusable.</li>
+      <li>Selectors: element, class (<code>.</code>), id (<code>#</code>), hierarchy (space).</li>
+      <li>Fonts, colors, borders, lists, and backgrounds are all CSS properties.</li>
+      <li>Layouts are built from <code>width</code>, <code>margin</code>, <code>padding</code>, and <code>float</code>.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Create a <code>style.css</code> file and link it from your page. Add a <code>body</code> rule with a <code>font-family</code>.</li>
+      <li>Add a <code>.boldText</code> class and apply it to a paragraph.</li>
+      <li>Set a container <code>div</code> to <code>width: 600px; margin: 0 auto;</code> and see it centre.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Six</button>
+    <button class="nav-button" data-nav="next">Chapter Eight →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 8 — CREATING AND STYLING WEB FORMS
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-creating-styling-forms">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Two · HTML and CSS · Chapter 8</p>
+    <h2>Creating and Styling Web Forms</h2>
+    <p class="chapter-tagline">Gathering information from users — and making the form usable.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Web forms are how a page gathers information. A <code>&lt;form&gt;</code> element wraps a set of fields. Its <code>action</code> attribute says where the data goes; its <code>method</code> attribute (GET or POST) says how it gets there. GET puts the data in the URL — fine for small forms, and easier to bookmark. POST sends the data invisibly, with no length limit — fine for larger forms and for anything sensitive.</p>
+
+    <p>The <code>&lt;input&gt;</code> element covers most of the ground, with its <code>type</code> attribute choosing the field. <code>type="text"</code> gives a single-line text box; <code>size</code> and <code>maxsize</code> control its dimensions. <code>type="password"</code> masks the input. <code>type="checkbox"</code> creates a checkbox; <code>type="radio"</code> creates a radio button. A group of radio buttons with the same <code>name</code> allows only one selection. <code>type="submit"</code> creates the button that sends the form; <code>type="reset"</code> clears it.</p>
+
+    <p>For longer text, use <code>&lt;textarea&gt;</code>. For dropdowns, use <code>&lt;select&gt;</code> with <code>&lt;option&gt;</code> children — add <code>selected="selected"</code> on one option to choose the default. For grouping, use <code>&lt;fieldset&gt;</code> with a <code>&lt;legend&gt;</code> caption. For each field, use a <code>&lt;label&gt;</code> — either wrapping the field or connected via <code>for</code> and <code>id</code> — so users can click the label to focus the field, and assistive technology knows what the field is for.</p>
+
+    <pre class="code-example"><code>&lt;form action="#"&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Form Information&lt;/legend&gt;
+    &lt;div&gt;
+      &lt;label for="username"&gt;Name:&lt;/label&gt;
+      &lt;input id="username" type="text" name="username"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;label for="email"&gt;E-mail Address:&lt;/label&gt;
+      &lt;input id="email" type="text" name="email"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;input type="submit" name="submit" value="Send Form"&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;</code></pre>
+
+    <p>Once the form exists, style it with CSS. A common pattern: each field row is a <code>.form-field</code> div; inside, the label is floated left with a fixed width, the input is floated right with a fixed width. That aligns labels and fields into neat columns. Add a class to the submit button to control its own styling.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Form: <code>&lt;form&gt;</code> with <code>action</code> and <code>method</code> (GET or POST).</li>
+      <li>Input types: text, password, checkbox, radio, submit, reset.</li>
+      <li>Use <code>select</code> for dropdowns, <code>textarea</code> for long text, <code>fieldset</code>/<code>legend</code> for groups.</li>
+      <li>Always use <code>&lt;label&gt;</code> — for accessibility and usability.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Build the sample form and load it in your browser.</li>
+      <li>Add a checkbox, a group of radio buttons, and a textarea.</li>
+      <li>Style the fields with a <code>.form-field</code> class, floats, and fixed widths.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Seven</button>
+    <button class="nav-button" data-nav="next">Enter Book Three →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     BOOK 3 DIVIDER — JAVASCRIPT
+     ============================================================ -->
+<section class="book-page cover-page part-page part-three" id="book-three">
+  <div class="cover-content">
+    <p class="part-number">Book Three</p>
+    <h1>JavaScript</h1>
+    <p class="part-desc">Bringing pages to life — variables and loops, jQuery and the DOM, event handlers, and the troubleshooting tools that keep you sane.</p>
+    <div class="book-nav">
+      <button class="nav-button" data-nav="next">Begin Chapter Nine →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 9 — UNDERSTANDING JAVASCRIPT BASICS
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-javascript-basics">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Three · JavaScript · Chapter 9</p>
+    <h2>Understanding JavaScript Basics</h2>
+    <p class="chapter-tagline">What it is, what it isn't, and how to add it to a page.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>JavaScript is a very powerful language that runs inside the web browser. HTML gives a page structure; CSS gives it appearance; JavaScript gives it behaviour. With JavaScript you can make pages come alive — auto-populating form fields, responding to clicks and keypresses, moving things around on the page, communicating with the server behind the scenes.</p>
+
+    <p>One thing to get straight immediately: JavaScript is not Java. The two languages are completely unrelated. Java is a heavy language that requires an extra install to run; JavaScript is built into every web browser and requires nothing. The name was a marketing decision made when Java was shiny and new.</p>
+
+    <p>You add JavaScript to a page with the <code>&lt;script&gt;</code> tag. Inside the tag, put your code. The tag can go in the head or in the body — both work. You can also use an external file with the <code>src</code> attribute, which is cleaner for anything longer than a few lines.</p>
+
+    <pre class="code-example"><code>&lt;script type="text/javascript"&gt;
+  alert("hello");
+&lt;/script&gt;
+
+&lt;script type="text/javascript" src="externalfile.js"&gt;&lt;/script&gt;</code></pre>
+
+    <p>JavaScript has its own syntax. Comments start with <code>//</code> or sit between <code>/* */</code>. Statements end with semicolons. Variables are declared with <code>var</code>. Functions are blocks of reusable code. The browser's developer console — usually opened with F12 — shows error messages and lets you run snippets live.</p>
+
+    <p>One limitation to know up front: JavaScript runs in the user's browser, so it can be turned off entirely. Anything that's truly essential — like validation that absolutely must happen — has to be done on the server side, in PHP. This is a theme that will come up again in Book Six, when we validate forms for real.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>JavaScript provides behaviour; it runs in the browser.</li>
+      <li>It has nothing to do with Java.</li>
+      <li>Add it with a <code>&lt;script&gt;</code> tag or an external file.</li>
+      <li>It can be turned off in the browser — so critical logic must live on the server too.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Add a <code>&lt;script&gt;</code> tag to your page with <code>alert("hello");</code> in it. Reload — did the alert appear?</li>
+      <li>Move the script to an external file and reference it with <code>src</code>.</li>
+      <li>Open the console (F12). What does <code>console.log("Test!")</code> do?</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Book Three</button>
+    <button class="nav-button" data-nav="next">Chapter Ten →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 10 — BUILDING A JAVASCRIPT PROGRAM
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-building-javascript-program">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Three · JavaScript · Chapter 10</p>
+    <h2>Building a JavaScript Program</h2>
+    <p class="chapter-tagline">Variables, conditionals, loops, functions, objects, and the DOM.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Programming starts with the basics. Variables hold data: <code>var myVariable = 4;</code> creates a variable and sets it to 4. Arrays hold multiple values: <code>var myArray = ["Steve","Jakob","Rebecca","Owen"];</code>. Strings hold text — anything in quotes. Numbers support arithmetic: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>. The <code>+</code> sign also concatenates strings.</p>
+
+    <p>Conditionals make decisions. The form is <code>if (condition) { ... } else if (condition) { ... } else { ... }</code>. JavaScript has two equality operators: <code>==</code> compares value (with type coercion) and <code>===</code> compares value and type. For example, <code>"5" == 5</code> is true, but <code>"5" === 5</code> is false. Prefer <code>===</code> to avoid surprises.</p>
+
+    <p>Loops repeat. A <code>for</code> loop is the workhorse: <code>for (var i = 0; i &lt; 10; i++) { ... }</code>. Inside, you can use <code>i</code> to count. A <code>while</code> loop repeats as long as a condition is true. Both can go wrong — an infinite loop will freeze the tab — so always make sure something inside the loop changes the value the condition checks.</p>
+
+    <p>Functions bundle reusable code. Declare one with <code>function addNumbers(num1, num2) { return num1 + num2; }</code> and call it with <code>addNumbers(49, 2)</code>. The <code>return</code> statement sends a value back to the caller; without it, the function returns <code>undefined</code>.</p>
+
+    <pre class="code-example"><code>var myVariable = 4;
+alert(myVariable);
+
+for (var i = 0; i &lt; 10; i++) {
+  alert("The variable i is currently set to " + i);
+}
+
+function addNumbers(num1, num2) {
+  return num1 + num2;
+}
+var result = addNumbers(49, 2);</code></pre>
+
+    <p>Objects hold multiple named values: <code>var ball = { "color": "white", "type": "baseball" };</code>. Access a property with dot notation: <code>ball.color</code>. Add a property with <code>ball.weight = 15;</code>. Loop through an object's properties with <code>for (var prop in ball) { alert(ball[prop]); }</code>.</p>
+
+    <p>Finally, JavaScript can interact with the HTML page through the DOM. The key function is <code>document.getElementById("myDiv")</code>, which returns a reference to the element with that id. From there you can read or change its content — <code>theDiv.innerHTML</code> — or its style — <code>theDiv.style.border = "3px solid black"</code>. Other browser objects — <code>navigator</code>, <code>location</code> — give you information about the browser and the current page, and let you redirect to another URL.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Variables, arrays, strings, numbers — the data building blocks.</li>
+      <li><code>if / else if / else</code> makes decisions; prefer <code>===</code> to <code>==</code>.</li>
+      <li><code>for</code> and <code>while</code> repeat; watch out for infinite loops.</li>
+      <li>Functions accept parameters and return values.</li>
+      <li>Objects hold named properties; the DOM exposes the page as objects.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Declare a variable, an array, and an object. Log each to the console.</li>
+      <li>Write a <code>for</code> loop that logs only the even numbers from 1 to 20.</li>
+      <li>Write a function that returns the larger of two numbers, and call it with several pairs.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Nine</button>
+    <button class="nav-button" data-nav="next">Chapter Eleven →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 11 — ADDING JQUERY
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-adding-jquery">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Three · JavaScript · Chapter 11</p>
+    <h2>Adding jQuery</h2>
+    <p class="chapter-tagline">The library that makes JavaScript's DOM work feel like CSS.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>jQuery is a JavaScript library — a collection of code you add to your page to make writing JavaScript easier. You still use JavaScript with jQuery; you just use less of it, and the code you write looks a lot like CSS selectors. Its big advantage is that it smooths over the browser differences that otherwise make front-end work so tedious.</p>
+
+    <p>You install jQuery by downloading it from <code>jquery.com</code> (save the file into your Document Root), or by pointing at a CDN-hosted copy from Google or Microsoft. The CDN approach is convenient for development; a local copy is more reliable for production. Either way, you add it to the page with a <code>&lt;script&gt;</code> tag, usually in the head.</p>
+
+    <pre class="code-example"><code>&lt;script type="text/javascript"
+  src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.1.min.js"&gt;
+&lt;/script&gt;</code></pre>
+
+    <p>Once jQuery is loaded, you use its <code>$()</code> function everywhere. It takes a CSS-style selector and returns a set of matching elements. <code>$("#bookTitle")</code> selects the element with that id; <code>$(".titleClass")</code> selects elements with that class; <code>$("div")</code> selects all divs. From there, chain methods to read or change things: <code>.text()</code> gets or sets text, <code>.html()</code> gets or sets HTML, <code>.attr()</code> gets or sets attributes, <code>.addClass()</code> and <code>.removeClass()</code> change styles.</p>
+
+    <p>The jQuery <code>ready()</code> function waits until the page is loaded before running your code. Code inside the <code>ready()</code> block can safely interact with the DOM, because everything exists by then.</p>
+
+    <pre class="code-example"><code>$(document).ready(function() {
+  $("#theList").append("&lt;li&gt;Here's 3&lt;/li&gt;");
+  $("#theList li").each(function() {
+    var existingText = $(this).text().substr(7, 1);
+    $(this).text("Item " + existingText);
+  });
+});</code></pre>
+
+    <p>With jQuery, adding HTML, changing text, updating attributes, and modifying CSS all become one-liners. That's the pitch: less code, fewer cross-browser headaches, and CSS-selector fluency you already have.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>jQuery is a library that makes DOM work easier and more browser-consistent.</li>
+      <li>Install from a local download or a CDN.</li>
+      <li><code>$()</code> takes a CSS selector and returns matching elements.</li>
+      <li>Wrap code in <code>ready()</code> to run it after the page is loaded.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Add jQuery to your page. Verify it loaded by running <code>alert($.fn.jquery)</code>.</li>
+      <li>Use <code>$("#myDiv").text("Hello!")</code> to change an element's text.</li>
+      <li>Use <code>attr()</code> to read the <code>href</code> of a link and log it to the console.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Ten</button>
+    <button class="nav-button" data-nav="next">Chapter Twelve →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 12 — REACTING TO EVENTS
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-reacting-events">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Three · JavaScript · Chapter 12</p>
+    <h2>Reacting to Events with JavaScript and jQuery</h2>
+    <p class="chapter-tagline">When the user does something, your code responds.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Events are things that happen. Form events include selecting a checkbox or submitting a form. Mouse events include clicks and movement. Keyboard events include key presses. Page events include loading and unloading. Every interaction with a web page — every action the user can take — is an event you can choose to react to.</p>
+
+    <p>Reacting to form submission is one of the most common things JavaScript does. Attach a <code>submit()</code> handler to the form, and you can inspect its values before it goes to the server. Return <code>false</code> to prevent the submission, or call <code>event.preventDefault()</code>. This is how client-side validation happens: catch errors before they get sent.</p>
+
+    <pre class="code-example"><code>$(document).ready(function() {
+  $("form").submit(function(event) {
+    if ($("#username").val() == "") {
+      alert("Name can't be blank");
+      event.preventDefault();
+      return false;
+    }
+  });
+});</code></pre>
+
+    <p>Reacting to clicks lets you build interactive widgets. Suppose you have three checkboxes for car options. Clicking the Deluxe radio button should check all three. Clicking Plain should uncheck them. Clicking any checkbox should switch the radio to Custom. jQuery's <code>.click()</code> handler and <code>.attr("checked", true/false)</code> make this trivial.</p>
+
+    <p>Reacting to hover is similar. The <code>.hover()</code> function takes two callbacks: one for when the mouse enters the element, one for when it leaves. Use them to add and remove a class, changing colors or showing additional information.</p>
+
+    <p>Reacting to keyboard events opens up character counting, which is what Twitter and every contact form in existence use. Attach a handler to <code>keyup</code>, read the current value with <code>.val().length</code>, and update a nearby <code>&lt;span&gt;</code> with the remaining characters. You can also prevent input entirely by setting <code>disabled="disabled"</code> on a form field — useful when one field's value depends on another's.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Events: form, mouse, keyboard, page.</li>
+      <li>Attach with jQuery methods like <code>submit()</code>, <code>click()</code>, <code>hover()</code>, or the generic <code>on()</code>.</li>
+      <li>Return <code>false</code> or call <code>preventDefault()</code> to stop a form from submitting.</li>
+      <li>Character counting uses <code>keyup</code> plus <code>.val().length</code>.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Add a submit handler that prevents submission if a field is blank.</li>
+      <li>Make three boxes turn a different color on hover using <code>.hover()</code>.</li>
+      <li>Add a character counter that updates a <code>&lt;span&gt;</code> as you type in a textarea.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Eleven</button>
+    <button class="nav-button" data-nav="next">Chapter Thirteen →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 13 — TROUBLESHOOTING JAVASCRIPT
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-troubleshooting-js">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Three · JavaScript · Chapter 13</p>
+    <h2>Troubleshooting JavaScript Programs</h2>
+    <p class="chapter-tagline">When your code won't do what you want, the tools that show you why.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>The most important troubleshooting technique is to stop and stay calm. Then reduce the problem to smaller parts. The problem could be with the page, the script, the server, the database, or several at once. Taking a moment to figure out which is which saves hours of guessing.</p>
+
+    <p>The simplest debugging tool is <code>alert()</code>. Drop one in at the point where you think the program is failing. If it fires, the program got that far. If it doesn't, the problem is earlier. Add alerts at strategic points to narrow down the line where things go wrong. The same trick works for displaying variable values: <code>alert(myVariable)</code> shows what's actually in there.</p>
+
+    <pre class="code-example"><code>alert("Just executed this code!");
+
+var myVariable = 77;
+// var myVariable = 77;  &lt;-- commented out, won't run
+
+/*
+  This block is also commented out.
+  var otherVariable = 5;
+  alert(otherVariable);
+*/</code></pre>
+
+    <p>Comments serve double duty. Yes, they document code so future-you understands it. But they also let you temporarily disable code — comment it out — to isolate the part that's causing trouble. Remove a block, see if the problem goes away, add it back piece by piece.</p>
+
+    <p>For more serious debugging, install <strong>Firebug</strong> — an add-on for Firefox that shows JavaScript errors, tracks network requests, and lets you inspect the DOM. Its <strong>Console Panel</strong> (enable it from the Console menu) shows errors as they happen; the <strong>Net Panel</strong> shows file requests and their response codes, which is invaluable for figuring out whether a file failed to load. Chrome's developer tools, Edge's F12 Developer Tools, and Safari's Web Inspector do the same things — pick one and learn it well.</p>
+
+    <p><code>console.log()</code> is the modern alternative to <code>alert()</code>. It writes to the console instead of interrupting with a dialog. You can log values, objects, and structured data. For anything beyond a quick sanity check, it's better than alert — nothing blocks the page while you click OK.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Stop, stay calm, reduce the problem to smaller parts.</li>
+      <li>Use <code>alert()</code> and <code>console.log()</code> to trace execution.</li>
+      <li>Comment out code to isolate the failing piece.</li>
+      <li>Firebug (or built-in dev tools) shows errors, network requests, and the DOM.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Introduce a deliberate typo in a variable name. What error appears in the console?</li>
+      <li>Comment out a block of code. Does the page still work?</li>
+      <li>Open the console and log the value of a variable at several points in a loop.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Twelve</button>
+    <button class="nav-button" data-nav="next">Enter Book Four →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     BOOK 4 DIVIDER — PHP
+     ============================================================ -->
+<section class="book-page cover-page part-page part-four" id="book-four">
+  <div class="cover-content">
+    <p class="part-number">Book Four</p>
+    <h1>PHP</h1>
+    <p class="part-desc">The server-side language — variables, scripts, files, objects, security, and the sessions that keep visitors logged in.</p>
+    <div class="book-nav">
+      <button class="nav-button" data-nav="next">Begin Chapter Fourteen →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 14 — UNDERSTANDING PHP BASICS
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-php-basics">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Four · PHP · Chapter 14</p>
+    <h2>Understanding PHP Basics</h2>
+    <p class="chapter-tagline">Tags, variables, types, arrays, dates, and errors.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>PHP is an embedded scripting language. Its code lives inside HTML files, between <code>&lt;?php</code> and <code>?&gt;</code> tags. When the web server gets a request for a <code>.php</code> file, it scans for PHP sections, hands those to the PHP processor, and replaces each one with its output before sending the result to the browser. The browser never sees the PHP code — only what the PHP code produces.</p>
+
+    <p>PHP syntax is straightforward. Simple statements end with semicolons. Multiple statements can go on one line, or span many. Complex statements — <code>if</code> statements, loops, functions — use curly braces to group statements into blocks. Whitespace doesn't matter to PHP; use it freely to make the code readable.</p>
+
+    <p>Variables start with a dollar sign: <code>$age = 12;</code> creates a variable named <code>$age</code> and sets it to 12. Names must start with a letter or underscore, can contain letters, numbers, and underscores, and are case-sensitive. Use descriptive names. You can assign strings (quoted), numbers (unquoted), arrays, and more. Constants are like variables but can't change after being defined: <code>define("COMPANY", "My Fine Company");</code>.</p>
+
+    <pre class="code-example"><code>&lt;?php
+$age = 12;
+$name = "Little Bo Peep";
+echo $age;
+echo $name;
+
+$weekday = "Monday";
+var_dump($weekday);  // string(6) "Monday"
+?&gt;</code></pre>
+
+    <p>PHP has eight data types: integer, float, string, boolean, NULL, array, object, resource. PHP determines the type automatically based on what you assign. It also converts types automatically when needed — adding an integer to a float produces a float, for example. You can force a type with a cast: <code>(int) $var</code>.</p>
+
+    <p>Arrays hold multiple values under one name. Create one with <code>$cities[] = "Phoenix";</code> or <code>$cities = array("Phoenix", "Tucson", "Flagstaff");</code>. Access elements with square brackets. Use <code>sort()</code>, <code>asort()</code>, <code>ksort()</code>, and friends to order them. Use <code>foreach</code> to walk through every element in turn. Multidimensional arrays are arrays of arrays.</p>
+
+    <p>Dates and times come from the <code>date()</code> function, which formats a Unix timestamp (seconds since January 1, 1970) into a readable string. The <code>time()</code> function returns the current timestamp. <code>strtotime()</code> parses a human-readable date string. PHP displays five types of error messages: parse errors (the script won't run), fatal errors (the script stops), warnings (the script continues, but something is wrong), notices (the script continues, but something is unusual), and strict (coding standards). When something goes wrong, the message names the file and line.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>PHP code lives between <code>&lt;?php</code> and <code>?&gt;</code> tags, embedded in HTML.</li>
+      <li>Variables start with <code>$</code>, are case-sensitive, and should be descriptively named.</li>
+      <li>PHP has eight types; it converts between them automatically as needed.</li>
+      <li>Arrays hold multiple values; <code>foreach</code> walks through them.</li>
+      <li>Error messages name the file and line where the problem occurred.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Create a PHP script that assigns three variables (a number, a string, and a boolean) and echoes each.</li>
+      <li>Create an array of five city names. Sort it. Echo each element.</li>
+      <li>Call <code>date("Y-m-d")</code> and <code>time()</code>. What does each return?</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Book Four</button>
+    <button class="nav-button" data-nav="next">Chapter Fifteen →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 15 — BUILDING PHP SCRIPTS
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-building-php-scripts">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Four · PHP · Chapter 15</p>
+    <h2>Building PHP Scripts</h2>
+    <p class="chapter-tagline">Conditions, loops, functions, and the organization that keeps them clean.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>PHP scripts are more than one statement after another. They branch, repeat, and reuse code. The building blocks for all of that are conditions, loops, and functions.</p>
+
+    <p><strong>Conditions</strong> test values. PHP's comparison operators are <code>==</code> (equal in value), <code>===</code> (equal in value and type), <code>!=</code> and <code>&lt;&gt;</code> (not equal), <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>. Compare strings, numbers, or variables. Join comparisons with <code>and</code>, <code>or</code>, or <code>xor</code> — and remember that <code>and</code> binds tighter than <code>or</code>. Use parentheses to be explicit.</p>
+
+    <p>For pattern matching, use <code>preg_match()</code>. A regular expression like <code>/^[A-Za-z].*$/</code> matches any string that begins with a letter. <code>/^[0-9]{5}$/</code> matches exactly five digits. <code>/^.+@.+\.com$/</code> matches a common email format. Regex is how you validate things the browser can't be trusted to check.</p>
+
+    <p><strong>Conditional statements</strong> decide what to do. <code>if</code> runs a block when a condition is true; <code>elseif</code> tests additional conditions; <code>else</code> catches everything else. <code>switch</code> handles many discrete cases more cleanly than a long chain of <code>if/elseif</code> — each case ends with <code>break</code> to stop fall-through.</p>
+
+    <p><strong>Loops</strong> repeat. <code>for</code> bundles a counter, a condition, and an increment. <code>while</code> loops as long as a condition is true. <code>do..while</code> runs at least once and then checks. Watch out for infinite loops — a loop whose condition never becomes false. <code>break</code> exits a loop early; <code>continue</code> skips the rest of the current iteration.</p>
+
+    <pre class="code-example"><code>&lt;?php
+if ($score &gt; 92) {
+  $grade = "A";
+} elseif ($score &gt; 83) {
+  $grade = "B";
+} else {
+  $grade = "C";
+}
+
+for ($i = 1; $i &lt;= 3; $i++) {
+  echo "$i. Hello World!&lt;br /&gt;";
+}
+
+function compute_salestax($amount, $custState) {
+  switch ($custState) {
+    case "OR": $rate = 0; break;
+    case "CA": $rate = 1.0; break;
+    default:   $rate = 0.5; break;
+  }
+  return $amount * $rate;
+}
+echo compute_salestax(2000.00, "CA");
+?&gt;</code></pre>
+
+    <p><strong>Functions</strong> bundle reusable code. Declare with <code>function name($param1, $param2) { ... }</code>, call with <code>name($arg1, $arg2)</code>. Use <code>return</code> to send a value back. Pass by value by default; add <code>&amp;</code> before a parameter name to pass by reference. Default values let you call with fewer arguments: <code>function add_2_numbers($a = 1, $b = 1)</code>.</p>
+
+    <p><strong>Organize scripts</strong> by separating logic from display. Put reusable functions in include files (<code>include("functions.inc");</code>, <code>require("functions.inc");</code>, <code>include_once</code>, <code>require_once</code>). Store the include files outside the Document Root, or give them a <code>.php</code> extension, to keep them from being visible to the world.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Comparison operators: <code>==</code>, <code>===</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>.</li>
+      <li>Regular expressions (<code>preg_match</code>) validate input by pattern.</li>
+      <li><code>if/elseif/else</code> and <code>switch</code> branch; <code>for</code>, <code>while</code>, <code>do..while</code> loop.</li>
+      <li>Functions accept parameters, return values, and can have defaults.</li>
+      <li>Include files separate display from logic and keep code reusable.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Write an <code>if/elseif/else</code> that assigns a letter grade for a score.</li>
+      <li>Write a <code>switch</code> that prints the name of a day given a number 1–7.</li>
+      <li>Write a function that accepts an array and returns the sum of its values.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Fourteen</button>
+    <button class="nav-button" data-nav="next">Chapter Sixteen →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 16 — PHP AND YOUR OPERATING SYSTEM
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-php-os">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Four · PHP · Chapter 16</p>
+    <h2>PHP and Your Operating System</h2>
+    <p class="chapter-tagline">Files, commands, FTP, and the flat files that hold data outside MySQL.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>PHP can interact with the operating system — reading and writing files, running system commands, transferring files over FTP, exchanging data with other programs. Most applications need only MySQL, but some need the extra reach.</p>
+
+    <p>For files, use <code>file_exists()</code>, <code>is_file()</code>, <code>is_dir()</code>, <code>filesize()</code>, <code>filemtime()</code> and the other file information functions. Copy with <code>copy()</code>, rename with <code>rename()</code>, delete with <code>unlink()</code>. Create directories with <code>mkdir()</code>; list their contents with <code>opendir()</code> and <code>readdir()</code> in a <code>while</code> loop.</p>
+
+    <p>For system commands, PHP offers four approaches. Backticks (<code>$output = `dir c:\php`;</code>) execute and return output. <code>system()</code> displays output and returns the last line. <code>exec()</code> does not display output; it stores it in an array and returns the last line. <code>passthru()</code> displays raw output without returning it. Use any of these only when the PHP function you need doesn't exist — and never with unvalidated user input, because that's how command injection happens.</p>
+
+    <pre class="code-example"><code>&lt;?php
+$result = file_exists("stuff.txt");
+copy("fileold.txt", "filenew.txt");
+rename("oldname.txt", "newname.txt");
+unlink("badfile.txt");
+
+if (!is_dir("mynewdir")) {
+  mkdir("mynewdir");
+}
+
+$dh = opendir("/topdir/testdir");
+while ($filename = readdir($dh)) {
+  echo "$filename\n";
+}
+?&gt;</code></pre>
+
+    <p>For FTP, use <code>ftp_connect()</code>, <code>ftp_login()</code>, <code>ftp_nlist()</code>, <code>ftp_get()</code> (download), <code>ftp_put()</code> (upload), and <code>ftp_close()</code>. FTP support must be enabled at install time on Unix/Linux/Mac (<code>--enable-ftp</code>); on Windows it's on by default. FTP is inherently insecure — the password travels in plain text — so for anything sensitive, prefer SCP or SFTP.</p>
+
+    <p>For reading and writing files, the pattern is: open with <code>fopen()</code> (mode <code>r</code> to read, <code>w</code> to write, <code>a</code> to append), write with <code>fwrite()</code>, read with <code>fgets()</code> in a loop until <code>feof()</code>, close with <code>fclose()</code>. For whole-file reads, <code>file()</code> gives you an array of lines, <code>file_get_contents()</code> gives you a single string.</p>
+
+    <p>For exchanging data, use comma-delimited files (CSV) with <code>fgetcsv()</code> to read and a loop to write, or use <code>sqlite_open()</code> and <code>sqlite_query()</code> to store structured data in a flat file without a full database server.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>File functions: <code>file_exists</code>, <code>is_file</code>, <code>copy</code>, <code>rename</code>, <code>unlink</code>, <code>mkdir</code>, <code>opendir</code>/<code>readdir</code>.</li>
+      <li>System commands: backticks, <code>system()</code>, <code>exec()</code>, <code>passthru()</code> — never with user input.</li>
+      <li>FTP: <code>ftp_connect</code>, <code>ftp_login</code>, <code>ftp_nlist</code>, <code>ftp_get</code>, <code>ftp_put</code>.</li>
+      <li>Read/write files with <code>fopen</code>, <code>fwrite</code>, <code>fgets</code>, <code>fclose</code>.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Write a script that checks whether a file exists, then creates it and writes a line to it.</li>
+      <li>Read a text file line by line and echo each line's number and content.</li>
+      <li>Create a CSV file with three rows of data and read it back with <code>fgetcsv()</code>.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Fifteen</button>
+    <button class="nav-button" data-nav="next">Chapter Seventeen →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 17 — OBJECT-ORIENTED PROGRAMMING
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-oop">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Four · PHP · Chapter 17</p>
+    <h2>Object-Oriented Programming</h2>
+    <p class="chapter-tagline">Classes, objects, inheritance, interfaces, and the philosophy of modelling a problem.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Object-oriented programming isn't just different syntax — it's a different way of analyzing a problem. The application is designed by modelling the programming problem: you identify the objects that make up the problem, then write classes that define what those objects can do.</p>
+
+    <p>An <strong>object</strong> is an instance of a <strong>class</strong>. The class is the template; the object is the thing made from the template. A class has <strong>properties</strong> (variables that hold data) and <strong>methods</strong> (functions that do things). Properties have access modifiers: <code>public</code> (accessible from anywhere), <code>private</code> (accessible only inside the class), <code>protected</code> (accessible inside the class and its children). Good practice is to keep properties private and provide public methods to access them.</p>
+
+    <p>Inside the class, the special variable <code>$this</code> refers to the current object. Use it to access properties and call methods: <code>$this->gas</code>, <code>$this->addGas(5)</code>. Use <code>__construct()</code> to run code when the object is created. Use <code>__clone()</code> when an object is cloned. Use <code>__destruct()</code> when the object is destroyed.</p>
+
+    <pre class="code-example"><code>&lt;?php
+class Car {
+  private $gas = 0;
+  private $color = "red";
+
+  function __construct($amt) {
+    $this->gas = $amt;
+    echo "Car created with {$this->gas} gallons\n";
+  }
+
+  public function addGas($amount) {
+    $this->gas = $this->gas + $amount;
+    echo "{$amount} gallons added\n";
+  }
+
+  public function buyGas($amount) {
+    $this->addGas($amount);
+  }
+}
+
+$my_car = new Car(5);
+$my_car->buyGas(10);
+?&gt;</code></pre>
+
+    <p><strong>Inheritance</strong> lets a class extend another. The parent class defines common properties and methods; the child class gets them all and can add or override. A child class's methods can call the parent's methods with <code>parent::</code>. An <strong>abstract class</strong> can't be instantiated directly — it exists to be a parent, and any child must implement its abstract methods. An <strong>interface</strong> is like a pure abstract class — a contract that any implementing class must fulfil.</p>
+
+    <p>The <code>final</code> keyword prevents a class from being extended or a method from being overridden. <strong>Exceptions</strong> handle errors: throw one with <code>throw new Exception("message");</code> and catch it with <code>try { ... } catch (Exception $e) { ... }</code>. Copy an object with <code>clone</code>. Compare objects with <code>==</code> (equal if same class and properties) or <code>===</code> (identical if they refer to the same instance).</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Objects are instances of classes; classes define properties and methods.</li>
+      <li>Access modifiers: <code>public</code>, <code>private</code>, <code>protected</code>.</li>
+      <li><code>$this</code> refers to the current object inside a method.</li>
+      <li>Inheritance (<code>extends</code>) shares code; abstract classes can't be instantiated; interfaces define contracts.</li>
+      <li><code>try</code>/<code>catch</code> handles exceptions.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Define a class <code>Person</code> with properties <code>$name</code> and <code>$age</code> and a method <code>greet()</code>.</li>
+      <li>Create two instances and call <code>greet()</code> on each.</li>
+      <li>Make <code>Person</code> the parent of a <code>Student</code> class with an additional <code>$school</code> property.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Sixteen</button>
+    <button class="nav-button" data-nav="next">Chapter Eighteen →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 18 — CONSIDERING PHP SECURITY
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-php-security">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Four · PHP · Chapter 18</p>
+    <h2>Considering PHP Security</h2>
+    <p class="chapter-tagline">Keeping attackers out — and keeping your users' data safe.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Security isn't a feature you add at the end; it's a mindset you adopt from the start. The two layers are <strong>server security</strong> and <strong>application security</strong>. Server security means keeping the operating system and web server patched and minimally exposed. Application security means validating every input and escaping every output.</p>
+
+    <p>On the server side, harden the operating system by removing unnecessary services and enabling a firewall. Run SuExec so PHP scripts execute under their owners' user IDs rather than the web server's, limiting the damage a vulnerable script can do. Install <strong>mod_security</strong>, an Apache module that filters incoming requests against a rule set designed to block common attacks.</p>
+
+    <p>In <code>php.ini</code>, set the security options: <code>safe_mode = on</code>, <code>open_basedir = directory</code>, <code>expose_php = off</code>, <code>register_globals = off</code>, <code>display_errors = off</code>, <code>log_errors = on</code>, and <code>error_log = filename</code>. Together, these hide PHP's presence, prevent attackers from injecting global variables, and keep errors out of the user's browser while sending them to a log file you can review.</p>
+
+    <pre class="code-example"><code>&lt;?php
+$inputString = "&lt;b&gt;Hello World&lt;/b&gt;";
+$safe_string = htmlentities($inputString);
+// $safe_string now contains:
+// &amp;lt;b&amp;gt;Hello World&amp;lt;/b&amp;gt;
+
+if (!preg_match('/^[A-Za-z\' -]+$/', $name)) {
+  echo "Please enter a valid name.";
+  exit();
+}
+?&gt;</code></pre>
+
+    <p>On the application side, <strong>always assume bad data</strong>. The user might type letters where you expect numbers, leave required fields blank, or paste an entire script tag into a comment box. The technique is to validate against what you expect — using regular expressions, string length checks, and type checks — and reject anything that doesn't match.</p>
+
+    <p>When you must accept input that you can't fully validate, <strong>sanitize</strong> it. <code>htmlentities()</code> converts <code>&lt;</code>, <code>&gt;</code>, <code>&amp;</code>, and quotes into HTML entities, preventing cross-site scripting. For database queries, use <code>mysqli_real_escape_string()</code> (or prepared statements) to prevent SQL injection.</p>
+
+    <p>For file uploads, disable them entirely if you don't need them (<code>file_uploads = Off</code> in <code>php.ini</code>). If you do need them, set limits on file size and file type, store them outside the web root, and validate the uploaded file's content before trusting it. Consider using PHP's FTP functions — they're safer than the <code>fopen()</code>-based approach for accepting user-uploaded files.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Harden the server: remove unnecessary services, run a firewall, enable SuExec and mod_security.</li>
+      <li>Set the important <code>php.ini</code> security options: <code>display_errors off</code>, <code>register_globals off</code>, <code>log_errors on</code>.</li>
+      <li>Always assume bad data. Validate against expected patterns.</li>
+      <li>Sanitize: <code>htmlentities()</code> for HTML, <code>mysqli_real_escape_string()</code> for SQL.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Run <code>htmlentities("&lt;b&gt;Hello&lt;/b&gt;")</code> and echo the result.</li>
+      <li>Write a <code>preg_match</code> that accepts only letters, spaces, and hyphens.</li>
+      <li>Set <code>display_errors = Off</code> and <code>log_errors = On</code> in <code>php.ini</code>. Then introduce a deliberate error and check the log.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Seventeen</button>
+    <button class="nav-button" data-nav="next">Chapter Nineteen →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 19 — TRACKING VISITORS WITH SESSIONS
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-sessions">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Four · PHP · Chapter 19</p>
+    <h2>Tracking Visitors with Sessions</h2>
+    <p class="chapter-tagline">Remembering who a visitor is from one page to the next.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>HTTP is stateless. Every request is independent. That's fine for static pages, but it's a problem for anything that needs to remember a user across multiple pages — like a login system. Sessions solve this by giving each visitor a unique identifier and storing their data on the server.</p>
+
+    <p>Behind the scenes, sessions use cookies. When the session starts, PHP sends a cookie containing a hash value. The browser sends that cookie back with each subsequent request. PHP looks up the hash, finds the corresponding session data on the server, and makes it available in the <code>$_SESSION</code> array. The user never sees the data — only the hash.</p>
+
+    <p>To use sessions, call <code>session_start()</code> at the top of every page that needs them. It either starts a new session (if none exists) or continues an existing one. Then read and write values through <code>$_SESSION</code>:</p>
+
+    <pre class="code-example"><code>&lt;?php
+session_start();
+$_SESSION['accessTime'] = date("M/d/Y g:i:sa");
+print "This is page 1&lt;br /&gt;";
+print "You accessed the application at: " . $_SESSION['accessTime'];
+?&gt;
+
+&lt;?php
+session_start();
+if (!isset($_SESSION['accessTime'])) {
+  die(header("Location: page1.php"));
+}
+print "This is page 2&lt;br /&gt;";
+print "You accessed the application at: " . $_SESSION['accessTime'];
+?&gt;</code></pre>
+
+    <p>The example also shows an important habit: check whether a session variable exists before using it. Sessions can time out, and a user might clear their cookies mid-session, in which case the session ID is lost and a new session starts with no data. A common pattern is to set one "app started" flag and check that on every protected page, redirecting to a landing page if it's missing.</p>
+
+    <p>To close a session explicitly, call <code>session_write_close()</code>. This is rarely necessary — sessions close automatically when the script ends — but it can be useful if two scripts need to write to the same session at the same time, or if you're about to perform a redirect that might outrun the automatic close. Other useful functions: <code>session_id()</code> gets or sets the current ID, <code>session_name()</code> gets or sets the name, <code>session_destroy()</code> removes all session data.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Sessions remember data about a visitor across multiple pages.</li>
+      <li>Session data is stored server-side and identified by a cookie containing a hash.</li>
+      <li>Call <code>session_start()</code> on every page that uses the session.</li>
+      <li>Check whether session variables exist before using them — sessions can disappear.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Create <code>page1.php</code> that sets a session variable and links to <code>page2.php</code>.</li>
+      <li>Create <code>page2.php</code> that reads the session variable and displays it.</li>
+      <li>Add a check on <code>page2.php</code> that redirects to <code>page1.php</code> if the variable is missing.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Eighteen</button>
+    <button class="nav-button" data-nav="next">Enter Book Five →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     BOOK 5 DIVIDER — MYSQL
+     ============================================================ -->
+<section class="book-page cover-page part-page part-five" id="book-five">
+  <div class="cover-content">
+    <p class="part-number">Book Five</p>
+    <h1>MySQL</h1>
+    <p class="part-desc">The database that stores your data — designing tables, writing queries, and wiring it all up to PHP.</p>
+    <div class="book-nav">
+      <button class="nav-button" data-nav="next">Begin Chapter Twenty →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 20 — INTRODUCING MYSQL
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-introducing-mysql">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Five · MySQL · Chapter 20</p>
+    <h2>Introducing MySQL</h2>
+    <p class="chapter-tagline">How the database works, and how to talk to it.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>MySQL is a Relational Database Management System (RDBMS). It manages databases that contain tables, which contain rows and columns, which contain data. A database can exist without data — just a structure, waiting. You create the database, then the tables, then you add data.</p>
+
+    <p>The heart of MySQL is the <strong>server</strong> — the software that handles all your database instructions. To create a new database, you send a message to the server saying "create a new database and call it newdata." The server creates the subdirectory and the necessary files. To add data, you send a message saying what data and where. The server does the rest.</p>
+
+    <p>You communicate with MySQL using SQL — Structured Query Language. SQL is almost English: statements start with a verb (<code>CREATE</code>, <code>INSERT</code>, <code>SELECT</code>, <code>UPDATE</code>, <code>DELETE</code>, <code>DROP</code>, <code>ALTER</code>), followed by words and phrases that tell MySQL what to act on. A query like <code>SELECT lastName FROM Member</code> retrieves all last names from the Member table. A more specific query adds a <code>WHERE</code> clause and an <code>ORDER BY</code>.</p>
+
+    <pre class="code-example"><code>SELECT lastName FROM Member
+
+SELECT lastName, firstName FROM Member
+WHERE state = 'CA' AND city = 'Fresno'
+ORDER BY lastName</code></pre>
+
+    <p>You can send SQL queries in two ways: through the <code>mysql</code> client (a text-based program installed with MySQL), or through PHP's built-in functions. The client is good for quick tests and administration; PHP is how your application talks to the database at runtime.</p>
+
+    <p>MySQL protects your data with accounts. Each account has a name, a hostname (the computer it can connect from), a password, and a set of privileges. No one can access your data without an account. Privileges specify what each account can do — select, insert, update, delete, create, drop. The account and its privileges are checked at connection time and again at every statement.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>MySQL is an RDBMS; data lives in tables with rows and columns.</li>
+      <li>SQL is the language: statements start with a verb, followed by specifics.</li>
+      <li>Send queries through the <code>mysql</code> client or through PHP functions.</li>
+      <li>Accounts and privileges protect data.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Connect to MySQL with <code>mysql -u root -p</code>. What version does the welcome message report?</li>
+      <li>Run <code>SHOW DATABASES;</code> — what databases already exist?</li>
+      <li>Write a SELECT query that retrieves two columns from a table.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Book Five</button>
+    <button class="nav-button" data-nav="next">Chapter Twenty-One →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 21 — ADMINISTERING MYSQL
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-administering-mysql">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Five · MySQL · Chapter 21</p>
+    <h2>Administering MySQL</h2>
+    <p class="chapter-tagline">Accounts, backups, restores, and the upgrade path.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>As MySQL administrator, you're responsible for keeping the database running, secure, and backed up. When MySQL is first installed, it creates a default account called <code>root</code> with all privileges. If it was installed without a password, the first thing you should do is set one. Root is not the account your PHP scripts should use — create a separate account with just the privileges your application needs.</p>
+
+    <p>Control access with accounts. Each account is identified by its name and hostname together: <code>phpuser@localhost</code>. The hostname can be a domain name, an IP address, or a wildcard (<code>%</code> matches any host). Passwords are encrypted before being stored. Privileges are granted on specific databases, tables, or columns — you can give an account <code>SELECT</code> on everything but <code>INSERT</code> on nothing.</p>
+
+    <pre class="code-example"><code>CREATE USER phpuser@localhost IDENTIFIED BY 'A41!14a!';
+
+GRANT SELECT ON ProductCatalog.* TO phpuser@localhost;
+
+SET PASSWORD FOR phpuser@localhost = PASSWORD('newpassword');
+
+SHOW GRANTS FOR phpuser@localhost;
+
+REVOKE ALL ON *.* FROM phpuser@localhost;
+
+DROP USER phpuser@localhost;</code></pre>
+
+    <p>Back up your database with <code>mysqldump</code>. It produces a text file containing all the SQL statements needed to recreate the database — the <code>CREATE</code> statements for each table and the <code>INSERT</code> statements for each row. Store multiple copies: one local for quick restore, one on another computer, one offsite. Restore by running the backup file through the <code>mysql</code> client after adding a <code>CREATE DATABASE</code> statement to the top.</p>
+
+    <p>Upgrading MySQL requires care. Back up first. Read the upgrade notes for your version. MySQL recommends not skipping versions — upgrade to each intermediate release in turn. After upgrading, run <code>mysql_upgrade</code> to repair files and upgrade system tables.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Don't use the <code>root</code> account for application access — create a limited account.</li>
+      <li>Accounts are identified by name and hostname; privileges control what they can do.</li>
+      <li>Back up with <code>mysqldump</code>, store copies in multiple locations.</li>
+      <li>Upgrade carefully, back up before, run <code>mysql_upgrade</code> after.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Create a MySQL account named <code>testuser@localhost</code> with a password.</li>
+      <li>Grant it <code>SELECT</code> on a database and verify with <code>SHOW GRANTS</code>.</li>
+      <li>Run <code>mysqldump</code> and examine the resulting file. What SQL statements does it contain?</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Twenty</button>
+    <button class="nav-button" data-nav="next">Chapter Twenty-Two →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 22 — DESIGNING AND BUILDING A DATABASE
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-designing-database">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Five · MySQL · Chapter 22</p>
+    <h2>Designing and Building a Database</h2>
+    <p class="chapter-tagline">Choosing data, organizing tables, and creating the structure that holds it all.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Designing a database is the most important step. Get it wrong, and you'll be reworking it later. The process: choose the data, identify the objects (each object becomes a table), identify the attributes (each attribute becomes a column), choose a primary key, define defaults, and identify which columns require data.</p>
+
+    <p>Store each piece of information in one place. If you find yourself entering the same data in multiple rows — like a publisher's address repeated for every book — split it into a separate table and reference it by ID. That's the whole point of a relational database: tables relate to each other through shared columns. A customer order table holds a <code>customerID</code> column that matches the <code>customerID</code> in the customer table. One customer, many orders, all linked by the same ID.</p>
+
+    <p>MySQL data types: <code>CHAR(length)</code> for fixed-length strings, <code>VARCHAR(length)</code> for variable-length strings, <code>TEXT</code> for long text, <code>INT(length)</code> for integers, <code>DECIMAL(length,dec)</code> for exact decimals, <code>DATE</code>, <code>TIME</code>, <code>DATETIME</code> for dates and times, <code>ENUM("val1","val2",...)</code> for a fixed set of allowed values, and <code>SERIAL</code> as a shortcut for <code>BIGINT UNSIGNED NOT NULL AUTO_INCREMENT</code>.</p>
+
+    <pre class="code-example"><code>CREATE DATABASE CustomerOrderInformation;
+
+CREATE TABLE Customer (
+  customerID SERIAL,
+  lastName VARCHAR(50),
+  firstName VARCHAR(40),
+  street VARCHAR(50),
+  city VARCHAR(50),
+  state CHAR(2),
+  zip CHAR(10),
+  email VARCHAR(50),
+  phone CHAR(15),
+  fax CHAR(15),
+  PRIMARY KEY(customerID)
+);</code></pre>
+
+    <p>Once the tables are built, change their structure with <code>ALTER TABLE</code>. Add a column with <code>ALTER TABLE ... ADD column definition</code>. Change a column's type with <code>MODIFY</code>. Rename a column with <code>CHANGE</code>. Drop a column with <code>DROP</code>. Rename a table with <code>RENAME</code>. Every change is a chance to make the database better fit the application.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Design first: choose data, define tables, columns, and primary keys.</li>
+      <li>Store each piece of information once; relate tables by shared columns.</li>
+      <li>Choose the right data type: <code>VARCHAR</code>, <code>INT</code>, <code>DECIMAL</code>, <code>DATE</code>, <code>ENUM</code>.</li>
+      <li>Build with <code>CREATE DATABASE</code> and <code>CREATE TABLE</code>; change with <code>ALTER TABLE</code>.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Design a database for a small library. What tables? What columns?</li>
+      <li>Create the database and tables with SQL.</li>
+      <li>Use <code>ALTER TABLE</code> to add a column for a book's ISBN.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Twenty-One</button>
+    <button class="nav-button" data-nav="next">Chapter Twenty-Three →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 23 — USING THE DATABASE
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-using-database">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Five · MySQL · Chapter 23</p>
+    <h2>Using the Database</h2>
+    <p class="chapter-tagline">Adding, retrieving, updating, and removing data.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>An empty database is like an empty cookie jar — nothing comes out. A useful database stores data in, and delivers data on request. The four operations are add, retrieve, update, and remove — often called CRUD (Create, Read, Update, Delete).</p>
+
+    <p>Add data with <code>INSERT</code>: list the columns and then the values. If you're inserting into every column, you can omit the column list — MySQL assumes values are in table order. For bulk data, use <code>LOAD DATA INFILE</code> to read from a delimited text file — commas or tabs separate fields; newlines separate rows.</p>
+
+    <p>Retrieve data with <code>SELECT</code>. <code>SELECT *</code> gets every column. Name specific columns to narrow the output. Add <code>ORDER BY</code> to sort (add <code>DESC</code> to reverse). Add <code>WHERE</code> to filter rows: comparison operators (<code>=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>BETWEEN</code>, <code>IN</code>, <code>LIKE</code>), combined with <code>AND</code> and <code>OR</code>. Add <code>LIMIT</code> to restrict how many rows come back. Add <code>DISTINCT</code> to eliminate duplicates.</p>
+
+    <pre class="code-example"><code>INSERT INTO Customer (lastName, street, city, state, zip, email, phone, fax)
+VALUES ('Contrary', '1234 Garden St', 'Garden', 'NV', '88888',
+        'maryc@hergarden.com', '(555) 555-5555', '');
+
+SELECT lastName, firstName FROM Customer
+WHERE state = 'CA' AND city = 'Fresno'
+ORDER BY lastName;
+
+UPDATE Customer
+SET street = '3423 RoseLawn', phone = '555-555-5555'
+WHERE lastName = 'Contrary';
+
+DELETE FROM Customer WHERE lastName = 'Contrary';</code></pre>
+
+    <p>Combine data from multiple tables with <code>UNION</code> (stack result sets one after another) or <code>JOIN</code> (put tables side by side, matching rows by a shared column). An <strong>inner join</strong> returns only rows that match in both tables. A <strong>left join</strong> returns all rows from the left table, filling in NULLs where the right has no match. A <strong>right join</strong> does the same from the right table's perspective.</p>
+
+    <p>Update data with <code>UPDATE ... SET column = value WHERE condition</code>. The <code>WHERE</code> clause is essential; without it, every row is updated. Remove data with <code>DELETE FROM ... WHERE condition</code>; again, the <code>WHERE</code> clause is essential. To drop a column, use <code>ALTER TABLE ... DROP column</code>. To drop a whole table, <code>DROP TABLE tablename</code>. To drop a whole database, <code>DROP DATABASE databasename</code>. All three are irreversible — back up before you use them.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Add data with <code>INSERT</code> or <code>LOAD DATA INFILE</code>.</li>
+      <li>Retrieve with <code>SELECT</code>, narrowing via <code>WHERE</code>, <code>ORDER BY</code>, <code>LIMIT</code>, <code>DISTINCT</code>.</li>
+      <li>Combine tables with <code>UNION</code> or <code>JOIN</code> (inner, left, right).</li>
+      <li>Update with <code>UPDATE</code>, remove with <code>DELETE</code> — always with a <code>WHERE</code> clause.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Insert three rows into a table of your own design.</li>
+      <li>Write a <code>SELECT</code> that retrieves rows matching two conditions and sorts them.</li>
+      <li>Use <code>UPDATE</code> to change one column of one row, then verify with a <code>SELECT</code>.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Twenty-Two</button>
+    <button class="nav-button" data-nav="next">Chapter Twenty-Four →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 24 — COMMUNICATING WITH THE DATABASE FROM PHP SCRIPTS
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-communicating-database">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Five · MySQL · Chapter 24</p>
+    <h2>Communicating with the Database from PHP Scripts</h2>
+    <p class="chapter-tagline">Wiring PHP to MySQL — connecting, querying, and handling errors.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>PHP doesn't understand SQL, but it can send it. The pattern is: establish a connection, send the query, handle the result, close the connection. PHP's MySQL functions handle all the networking details.</p>
+
+    <p>PHP has two sets of functions for MySQL: the older <code>mysql</code> functions and the newer <code>mysqli</code> (MySQL Improved) functions. This book assumes <code>mysqli</code> — it's required for MySQL 4.1 and later, and it's what modern hosts provide. If your host only offers <code>mysql</code>, the syntax is mostly the same but function names lose the <code>i</code> and the connection parameters differ slightly.</p>
+
+    <p>Connect with <code>mysqli_connect()</code>, passing the host, the account name, the password, and the database name. Then send queries with <code>mysqli_query()</code>. For queries that return data (SELECT, SHOW), the result is a result-set handle; you fetch rows from it with <code>mysqli_fetch_array()</code>, <code>mysqli_fetch_assoc()</code>, or <code>mysqli_fetch_row()</code>. For queries that change data (INSERT, UPDATE, DELETE), the result is a boolean success indicator.</p>
+
+    <pre class="code-example"><code>&lt;?php
+$host = "localhost";
+$user = "phpuser";
+$password = "";
+$dbname = "Customer";
+
+$cxn = mysqli_connect($host, $user, $password, $dbname)
+  or die("Couldn't connect to server.");
+
+$query = "SELECT * FROM Customer";
+$result = mysqli_query($cxn, $query)
+  or die("Couldn't execute query: " . mysqli_error($cxn));
+
+while ($row = mysqli_fetch_assoc($result)) {
+  echo $row['lastName'] . ", " . $row['firstName'] . "&lt;br /&gt;";
+}
+
+mysqli_close($cxn);
+?&gt;</code></pre>
+
+    <p>Other useful functions: <code>mysqli_num_rows($result)</code> tells you how many rows a query returned (useful for login validation), <code>mysqli_insert_id($cxn)</code> tells you the auto-increment value of the last inserted row (useful for relating tables), <code>mysqli_affected_rows($cxn)</code> tells you how many rows an UPDATE or DELETE touched, and <code>mysqli_real_escape_string($cxn, $data)</code> escapes a string so it's safe to use in a query.</p>
+
+    <p>Quote-escaping is essential for security. If you insert a user's name directly into a query and the name contains a single quote, the query breaks — or worse, an attacker can inject SQL. Always call <code>mysqli_real_escape_string()</code> on any string coming from outside your script before putting it in a query. The mysql extension had magic quotes to do this automatically; the mysqli extension does not, so you must do it yourself.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>The pattern: connect, query, handle result, close.</li>
+      <li>Use <code>mysqli_connect</code>, <code>mysqli_query</code>, <code>mysqli_close</code>.</li>
+      <li>Fetch rows with <code>mysqli_fetch_assoc</code> or <code>mysqli_fetch_array</code>.</li>
+      <li>Always escape strings with <code>mysqli_real_escape_string</code> before putting them in a query.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Write a PHP script that connects to MySQL and runs a simple <code>SELECT</code>.</li>
+      <li>Fetch and display each row as HTML.</li>
+      <li>Add a <code>WHERE</code> clause that uses a form value, with <code>mysqli_real_escape_string</code> applied first.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Twenty-Three</button>
+    <button class="nav-button" data-nav="next">Enter Book Six →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     BOOK 6 DIVIDER — WEB APPLICATIONS
+     ============================================================ -->
+<section class="book-page cover-page part-page part-six" id="book-six">
+  <div class="cover-content">
+    <p class="part-number">Book Six</p>
+    <h1>Web Applications</h1>
+    <p class="part-desc">Putting all the pieces together: helper functions, web services, real validation, and a members-only website with login and password reset.</p>
+    <div class="book-nav">
+      <button class="nav-button" data-nav="next">Begin Chapter Twenty-Five →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 25 — IMPROVING YOUR PHP PROGRAMS
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-improving-php">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Six · Web Applications · Chapter 25</p>
+    <h2>Improving Your PHP Programs</h2>
+    <p class="chapter-tagline">Automatically including helpers and reusing code.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Once your programs reach a certain length, you find yourself sprinkling <code>include</code> and <code>require_once</code> everywhere. Each new helper function requires another line at the top of every file. This gets tedious — and eventually, you forget one and the application breaks with a "function undefined" error.</p>
+
+    <p>The fix is <code>auto_prepend_file</code>. Set it in <code>php.ini</code> or in the Apache configuration with <code>php_value</code>. The file it names is automatically included before every PHP script runs. If it defines your helper functions and starts your session, every script gets them for free — no <code>require_once</code> needed.</p>
+
+    <pre class="code-example"><code>&lt;?php
+// prepend.php — automatically included before every script
+if (!isset($_SESSION)) {
+  session_start();
+}
+
+function convertState($state) {
+  $stateList = array(
+    "WI" =&gt; "Wisconsin",
+    "CA" =&gt; "California",
+    "NY" =&gt; "New York"
+  );
+  if (array_key_exists($state, $stateList)) {
+    return $stateList[$state];
+  } else {
+    return false;
+  }
+}
+?&gt;</code></pre>
+
+    <p>The prepended file is included as if by <code>require()</code>, which means if it's missing, an error occurs. That's the right behaviour — you want to know if your helper file isn't loading. But be careful not to chain too many includes inside it, or every request gets slow.</p>
+
+    <p>Another code-reuse technique is to define classes for things that need to be reused across files. A <code>User</code> class, for example, can encapsulate all the logic for creating, authenticating, and updating users. Code that calls <code>$user->authenticate()</code> doesn't need to know how authentication works — just that the method exists and returns a result.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><code>auto_prepend_file</code> automatically includes a file before every PHP script.</li>
+      <li>Use it for sessions, helper functions, and constants.</li>
+      <li>Don't chain too many includes inside the prepended file — it slows every request.</li>
+      <li>Classes are another way to reuse code cleanly.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Create a <code>prepend.php</code> file with one helper function.</li>
+      <li>Add a <code>php_value auto_prepend_file "prepend.php"</code> directive to your Apache config or <code>.htaccess</code>.</li>
+      <li>Call the function from a different PHP script. Does it work without <code>require_once</code>?</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Book Six</button>
+    <button class="nav-button" data-nav="next">Chapter Twenty-Six →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 26 — CREATING AND USING A WEB SERVICE
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-web-service">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Six · Web Applications · Chapter 26</p>
+    <h2>Creating and Using a Web Service</h2>
+    <p class="chapter-tagline">Returning data in JSON or XML, and accepting input.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>A <strong>web service</strong> is a program that returns data in a structured format — usually JSON or XML — for another program to consume. The consumer might be a JavaScript front end on another site, a mobile app, or a server-side program you've written yourself. Web services are how programs talk to each other over HTTP.</p>
+
+    <p>The simplest web service returns a date. Set the <code>Content-Type</code> header to tell the browser what format to expect, build your data, and call <code>json_encode()</code> on it. The result is a string that any JSON-aware consumer can parse. Return an array with named keys, and the consumer can access each field by name.</p>
+
+    <pre class="code-example"><code>&lt;?php
+$header = "Content-Type: application/json";
+header($header);
+
+$returnData = array(
+  "friendlyDate" =&gt; date("M d, Y"),
+  "unixTime"     =&gt; time(),
+  "month"        =&gt; date("M"),
+  "dayOfWeek"    =&gt; date("l"),
+  "year"         =&gt; date("Y")
+);
+
+print json_encode($returnData);
+?&gt;</code></pre>
+
+    <p>Consuming a web service from PHP uses cURL — <code>curl_init()</code>, <code>curl_setopt()</code>, <code>curl_exec()</code>, <code>curl_close()</code>. The returned data is parsed with <code>json_decode($output, true)</code>, which gives you an array. Or, if you requested XML, with <code>SimpleXML</code> or <code>DOMDocument</code>.</p>
+
+    <p>Returning XML is similar to returning JSON — build a <code>DOMDocument</code>, create elements for each field, append them to a parent, and save the XML. Set the <code>Content-Type</code> header to <code>text/xml</code> so the consumer knows what to expect.</p>
+
+    <p>Accepting input is a matter of reading <code>$_GET</code> or <code>$_POST</code> and validating the values before using them. For a web service, the common pattern is to accept a <code>format</code> parameter (<code>json</code> or <code>xml</code>) and return whichever the caller asked for. This gives consumers flexibility without maintaining two separate endpoints.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>A web service returns data in a structured format (JSON or XML) for another program to consume.</li>
+      <li>Set the <code>Content-Type</code> header, build your data, and encode it.</li>
+      <li>Consume with cURL, then <code>json_decode</code> or an XML parser.</li>
+      <li>Accept a <code>format</code> parameter to let consumers choose JSON or XML.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Create a web service that returns today's date in JSON.</li>
+      <li>Consume it from a second PHP script using cURL and <code>json_decode</code>.</li>
+      <li>Add a <code>format</code> parameter that returns XML if <code>format=xml</code> is passed.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Twenty-Five</button>
+    <button class="nav-button" data-nav="next">Chapter Twenty-Seven →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 27 — VALIDATING WEB FORMS WITH JAVASCRIPT AND PHP
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-validating-forms">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Six · Web Applications · Chapter 27</p>
+    <h2>Validating Web Forms with JavaScript and PHP</h2>
+    <p class="chapter-tagline">Catching mistakes on the client, then catching them again on the server.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Form validation is the process of making sure the data submitted is correct and in the right format. There are two layers. <strong>Client-side validation</strong> happens in the browser, using JavaScript. <strong>Server-side validation</strong> happens on the server, using PHP. Both are necessary — client-side gives the user fast feedback; server-side is the only one you can trust.</p>
+
+    <p>Three rules govern the process. First, <strong>assume bad data</strong>. Assume every submission is wrong until proven correct. Second, <strong>never assume JavaScript</strong>. The user can disable it, and malicious users can send data directly to your server without ever loading your page. Third, <strong>mirror client- and server-side validation</strong> where it makes sense. If a ZIP code must be five digits, check that on both sides.</p>
+
+    <p>JavaScript validation attaches a handler to the form's submit event. The handler checks each field, gathers the names of the fields that failed, and either lets the form submit (if everything is valid) or prevents submission and displays the errors (if not). The feedback usually takes the form of a class added to the invalid field — a red background, plus a text message that becomes visible when the field is invalid.</p>
+
+    <pre class="code-example"><code>$("#userForm").submit(function(e) {
+  removeFeedback();
+  var errors = validateForm();
+  if (errors == "") {
+    return true;
+  } else {
+    provideFeedback(errors);
+    e.preventDefault();
+    return false;
+  }
+});
+
+function validateForm() {
+  var errorFields = new Array();
+  if ($("#name").val() == "") { errorFields.push("name"); }
+  if ($("#email").val() == "") { errorFields.push("email"); }
+  if ($("#password1").val() == "") { errorFields.push("password1"); }
+  if ($("#password2").val() != $("#password1").val()) {
+    errorFields.push("password2");
+  }
+  return errorFields;
+}</code></pre>
+
+    <p>PHP validation happens in the script that processes the form. The pattern: check required fields first (loop through a list of required field names, add an error for each one that's missing or blank). Then check each field's format — text should match a pattern, numbers should be numeric, emails should look like emails. Use <code>filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)</code> for emails, <code>preg_match</code> for custom patterns, <code>strlen</code> for length checks.</p>
+
+    <p>Store the errors in <code>$_SESSION['error']</code>, redirect back to the form with <code>header("Location: form.php")</code>, and the form displays them. If there are no errors, redirect to a success page. The redirect-after-submit pattern ensures that refreshing the success page doesn't resubmit the form.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Validate twice: client-side for speed, server-side for trust.</li>
+      <li>Assume bad data; never assume JavaScript.</li>
+      <li>JavaScript validation attaches a submit handler that prevents submission on error.</li>
+      <li>PHP validation checks required fields, formats, and business rules.</li>
+      <li>Redirect after submit to avoid duplicate submissions.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Add JavaScript validation to a form for required fields and email format.</li>
+      <li>Add PHP validation to the form's processing script for the same checks.</li>
+      <li>Disable JavaScript and submit the form. Does PHP still catch the errors?</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Twenty-Six</button>
+    <button class="nav-button" data-nav="next">Chapter Twenty-Eight →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 28 — BUILDING A MEMBERS-ONLY WEBSITE
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-members-only">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Six · Web Applications · Chapter 28</p>
+    <h2>Building a Members-Only Website</h2>
+    <p class="chapter-tagline">Registration, login, authenticated pages, logout, and password reset.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>A members-only site is a site where some pages require login. The application has four main pieces: a user database, registration, login, and protected pages. A fifth piece — password reset — rounds it out for real-world usability.</p>
+
+    <p>The database stores user information. At minimum: an auto-incrementing ID, an email address (also used as the username), a password (encrypted with <code>crypt()</code>), and a creation date. Additional fields — name, address, phone — are useful but optional. The <code>email</code> column should be unique, so no two users can register with the same address.</p>
+
+    <p>Registration shows a form, validates the input, checks that the email isn't already registered, encrypts the password, and inserts the row. Login shows a form, validates the input, looks up the user by email, compares the encrypted submitted password with the stored encrypted password, and — on match — stores user information in the session. Protected pages check the session to see if a user is logged in; if not, they redirect to the login page.</p>
+
+    <pre class="code-example"><code>&lt;?php
+class User {
+  public $id;
+  public $email;
+  public $firstName;
+  public $isLoggedIn = false;
+
+  public function authenticate($user, $pass) {
+    $mysqli = new mysqli(DBHOST, DBUSER, DBPASS, DB);
+    if ($mysqli-&gt;connect_errno) { return false; }
+
+    $safeUser = $mysqli-&gt;real_escape_string($user);
+    $query = "SELECT * FROM Customer WHERE email = '{$safeUser}'";
+    if (!$result = $mysqli-&gt;query($query)) { return false; }
+
+    $row = $result-&gt;fetch_assoc();
+    $dbPassword = $row['password'];
+    if (crypt($pass, $dbPassword) != $dbPassword) {
+      return false;
+    }
+    $this-&gt;id = $row['id'];
+    $this-&gt;email = $row['email'];
+    $this-&gt;firstName = $row['first_name'];
+    $this-&gt;isLoggedIn = true;
+    $this-&gt;setSession();
+    return true;
+  }
+}
+?&gt;</code></pre>
+
+    <p>Password reset works like this: the user visits a "forgot password" page, enters their email, and submits. The script looks up the user, generates a unique hash, stores the hash in a <code>resetPassword</code> table along with the user ID and a timestamp, and emails the user a URL containing the hash. When the user clicks the link, they arrive at a page that asks for a new password, verifies the hash is still valid, and updates the password.</p>
+
+    <p>The full application is a good example of how all the pieces fit together: the database design from Book Five, the PHP and OOP from Book Four, the validation from earlier in Book Six, and the form handling from Book Two. Nothing in it is new — it's just the pieces, combined.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Members-only sites have a user database, registration, login, and protected pages.</li>
+      <li>Encrypt passwords with <code>crypt()</code>; never store them in plain text.</li>
+      <li>Check the session on every protected page; redirect if not logged in.</li>
+      <li>Password reset uses a unique hash stored in a database and emailed as a link.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Create the <code>Customer</code> table and a registration form that inserts a new user.</li>
+      <li>Create a login form that authenticates against the database and sets a session.</li>
+      <li>Create a protected page that redirects to the login page if not logged in.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Twenty-Seven</button>
+    <button class="nav-button" data-nav="next">Enter Book Seven →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     BOOK 7 DIVIDER — PHP AND TEMPLATES
+     ============================================================ -->
+<section class="book-page cover-page part-page part-seven" id="book-seven">
+  <div class="cover-content">
+    <p class="part-number">Book Seven</p>
+    <h1>PHP and Templates</h1>
+    <p class="part-desc">Configuring PHP for the work ahead, and building the templating system that keeps a site consistent as it grows.</p>
+    <div class="book-nav">
+      <button class="nav-button" data-nav="next">Begin Chapter Twenty-Nine →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 29 — CONFIGURING PHP
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-configuring-php">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Seven · PHP and Templates · Chapter 29</p>
+    <h2>Configuring PHP</h2>
+    <p class="chapter-tagline">The php.ini file, and the changes you'll actually want to make.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>PHP's behavior is controlled through a configuration file called <code>php.ini</code>. Settings for sessions, error display, file uploads, and available modules all live there. The file's location varies by operating system and installation method — check <code>phpinfo()</code> to see which file PHP is actually reading.</p>
+
+    <p>Before editing <code>php.ini</code>, make a copy of the original so you can revert if something breaks. Then edit it in a plain text editor, save, and reload Apache for the changes to take effect. A change in <code>php.ini</code> applies globally — to every site on the server.</p>
+
+    <p>For site-specific or directory-specific changes, use <code>.htaccess</code> or Apache's VirtualHost configuration with the <code>php_value</code> directive. For programmatic changes inside a single script, use <code>ini_set()</code> and <code>ini_get()</code>. This lets you raise limits or change settings just for the code that needs it, without affecting the whole server.</p>
+
+    <pre class="code-example"><code>session.gc_maxlifetime = 1440
+session.name = PHPSESSID
+session.cookie_domain =
+
+disable_functions = exec
+disable_classes =
+
+display_errors = Off
+error_reporting = E_ALL &amp; ~E_NOTICE
+
+upload_max_filesize = 100M
+post_max_size = 100M
+memory_limit = 256M
+max_execution_time = 30</code></pre>
+
+    <p>Common changes: lengthen <code>session.gc_maxlifetime</code> if users are being logged out too quickly. Set <code>display_errors = Off</code> in production so error messages don't leak pathnames or queries. Disable dangerous functions with <code>disable_functions</code> — <code>exec</code> and <code>system</code> are often disabled on shared hosting. Raise <code>upload_max_filesize</code> and <code>post_max_size</code> if you need to accept larger files. Raise <code>memory_limit</code> and <code>max_execution_time</code> if your script is timing out or running out of memory.</p>
+
+    <p>Every change you make is a trade-off. The largest file upload size is the largest file you'll have to handle. The longest execution time is the longest a script can hang before PHP kills it. The highest memory limit is the memory a script can eat before the server starts swapping. Choose values that fit your application, not values that simply remove every limit.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><code>php.ini</code> controls PHP behavior globally.</li>
+      <li><code>.htaccess</code> and <code>php_value</code> set it per-site; <code>ini_set()</code> sets it per-script.</li>
+      <li>Common changes: session timeout, error display, disabled functions, upload size.</li>
+      <li>Every limit is a trade-off — pick values that fit the application.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Find your <code>php.ini</code>. What is its current <code>memory_limit</code>?</li>
+      <li>Change it to 128M, reload Apache, and verify via <code>phpinfo()</code>.</li>
+      <li>Disable a function with <code>disable_functions</code> and try to call it. What error appears?</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Book Seven</button>
+    <button class="nav-button" data-nav="next">Chapter Thirty →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 30 — BUILDING A TEMPLATING SYSTEM
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-templating-system">
+  <div class="chapter-header">
+    <p class="chapter-part">Book Seven · PHP and Templates · Chapter 30</p>
+    <h2>Building a Templating System</h2>
+    <p class="chapter-tagline">One header, one footer, one place to change them.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>A template is a file that contains standard or boilerplate information used to create other files. When a site has only a few pages, maintaining a header and footer by hand is fine. When it has dozens — or hundreds — every change has to be made in every file. Templates reduce the header and footer to a single location. Change it there, and every page updates.</p>
+
+    <p>The template system in this chapter uses a PHP class called <code>Page</code>. It has three properties: <code>$type</code> (default, contact, and so on), <code>$title</code>, and <code>$titleExtra</code>. It has two main methods: <code>getTop()</code> builds the doctype, the opening <code>&lt;html&gt;</code>, the <code>&lt;head&gt;</code> section (from a text file plus the title), and the page top menu. <code>getBottom()</code> returns the footer and the closing tags.</p>
+
+    <pre class="code-example"><code>&lt;?php
+class Page {
+  public $type = "default";
+  public $title = "My Web Site";
+  public $titleExtra = "";
+
+  public function getTop() {
+    $output = "";
+    $output .= "&lt;!DOCTYPE html&gt;\n";
+    $output .= "&lt;html lang=\"en\"&gt;\n";
+    $output .= file_get_contents("pageHead.txt");
+    if ($this-&gt;titleExtra != "") {
+      $title = $this-&gt;titleExtra . " | " . $this-&gt;title;
+    } else {
+      $title = $this-&gt;title;
+    }
+    $output .= "&lt;title&gt;" . $title . "&lt;/title&gt;\n";
+    $output .= "&lt;/head&gt;\n";
+    $output .= file_get_contents("pageTop.txt");
+    return $output;
+  }
+
+  public function getBottom() {
+    return file_get_contents("pageBottom.txt");
+  }
+}
+
+$page = new Page();
+print $page-&gt;getTop();
+?&gt;
+&lt;div id="mainContent"&gt;
+  &lt;p&gt;This is where content goes.&lt;/p&gt;
+&lt;/div&gt;
+&lt;?php print $page-&gt;getBottom(); ?&gt;</code></pre>
+
+    <p>The two text files — <code>pageHead.txt</code> and <code>pageTop.txt</code> — hold the boilerplate. <code>pageHead.txt</code> contains the <code>&lt;head&gt;</code> open tag and any linked CSS or JavaScript files. <code>pageTop.txt</code> contains the menu structure and the opening <code>&lt;body&gt;</code>. The class includes these files with <code>file_get_contents()</code> and stitches them together with the doctype, html open tag, title, and head close.</p>
+
+    <p>To create a new page, instantiate the class, set the <code>titleExtra</code> property if you want a custom title bar, print the top, print your content, and print the bottom. Extending the template for different page types is a matter of checking <code>$page-&gt;type</code> inside <code>_getHead()</code> and including a different head file if the type is <code>contact</code> or <code>special</code>. The template stays small, the content files stay small, and the site stays consistent.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Templates reduce repeated header and footer code to one location.</li>
+      <li>A <code>Page</code> class with <code>getTop()</code> and <code>getBottom()</code> handles the boilerplate.</li>
+      <li>Common HTML lives in small text files that the class loads.</li>
+      <li>Extend the template by adding page types — check the type in <code>_getHead()</code> and load a different head file.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Build the <code>Page</code> class and its two text files.</li>
+      <li>Create a home page using the template. Save it as <code>home.php</code> and load it.</li>
+      <li>Create a second page with a different title using the same template.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Twenty-Nine</button>
+    <button class="nav-button" data-nav="next">The Little Dictionary →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     GLOSSARY
+     ============================================================ -->
+<section class="book-page chapter-page" id="glossary">
+  <div class="chapter-header">
+    <p class="chapter-part">After the Journey</p>
+    <h2>The Little Dictionary</h2>
+    <p class="chapter-tagline">Every term you met along the way.</p>
+  </div>
+
+  <dl class="glossary-list">
+    <dt>AJAX</dt><dd>A technique for fetching data from a server without reloading the page.</dd>
+    <dt>Apache httpd</dt><dd>The most popular open-source web server software.</dd>
+    <dt>API</dt><dd>Application Programming Interface — a set of rules for one program to talk to another.</dd>
+    <dt>Array</dt><dd>A PHP data type holding multiple values under one name.</dd>
+    <dt>auto_prepend_file</dt><dd>A PHP configuration directive that includes a file before every script runs.</dd>
+    <dt>Block-level element</dt><dd>An element that starts on a new line and fills the width of its parent.</dd>
+    <dt>Boolean</dt><dd>A value that is either <code>true</code> or <code>false</code>.</dd>
+    <dt>Class</dt><dd>A template for creating objects in object-oriented programming.</dd>
+    <dt>Client-server model</dt><dd>The web's architecture: browsers (clients) request pages from servers.</dd>
+    <dt>Constructor</dt><dd>A special method (<code>__construct</code>) that runs when an object is created.</dd>
+    <dt>Cookie</dt><dd>A small piece of data the server sends to the browser, which sends it back on future requests.</dd>
+    <dt>cURL</dt><dd>A PHP library for making HTTP requests from server-side code.</dd>
+    <dt>CSS</dt><dd>Cascading Style Sheets — the language of web page appearance.</dd>
+    <dt>CSV</dt><dd>Comma-separated values — a text format for tabular data.</dd>
+    <dt>Data type</dt><dd>The kind of value a variable holds: integer, float, string, boolean, NULL, array, object, resource.</dd>
+    <dt>Debugging</dt><dd>The process of finding and fixing errors in a program.</dd>
+    <dt>DNS</dt><dd>Domain Name System — the service that translates domain names into IP addresses.</dd>
+    <dt>DOM</dt><dd>Document Object Model — the browser's tree representation of a web page.</dd>
+    <dt>Exception</dt><dd>An object representing an error, thrown and caught to handle things that go wrong.</dd>
+    <dt>FTP</dt><dd>File Transfer Protocol — a way to move files between computers.</dd>
+    <dt>Function</dt><dd>A reusable block of code that can take arguments and return a value.</dd>
+    <dt>GET</dt><dd>An HTTP method that sends data in the URL. Good for small, non-sensitive forms.</dd>
+    <dt>HTML</dt><dd>HyperText Markup Language — the language of web page structure.</dd>
+    <dt>HTTP</dt><dd>HyperText Transfer Protocol — the protocol the web uses to move requests and responses.</dd>
+    <dt>Include file</dt><dd>A file pulled into a PHP script with <code>include</code> or <code>require</code>.</dd>
+    <dt>Inheritance</dt><dd>In OOP, a child class inherits properties and methods from a parent class.</dd>
+    <dt>Interface</dt><dd>In OOP, a contract that a class must implement.</dd>
+    <dt>IP address</dt><dd>A numeric address that identifies a computer on the network.</dd>
+    <dt>JavaScript</dt><dd>The programming language that runs in every web browser.</dd>
+    <dt>jQuery</dt><dd>A JavaScript library that simplifies DOM manipulation and events.</dd>
+    <dt>JSON</dt><dd>JavaScript Object Notation — a text format for structured data.</dd>
+    <dt>Loop</dt><dd>A construct that repeats a block of code until a condition is met.</dd>
+    <dt>Method</dt><dd>A function that belongs to a class.</dd>
+    <dt>MySQL</dt><dd>A popular, free, open-source relational database management system.</dd>
+    <dt>OOP</dt><dd>Object-oriented programming — organizing code around objects and classes.</dd>
+    <dt>PHP</dt><dd>The server-side scripting language used throughout this book.</dd>
+    <dt>POST</dt><dd>An HTTP method that sends data invisibly in the request body. Good for large or sensitive forms.</dd>
+    <dt>Primary key</dt><dd>A column (or combination of columns) that uniquely identifies each row in a table.</dd>
+    <dt>Property</dt><dd>A variable that belongs to an object.</dd>
+    <dt>Query</dt><dd>An SQL statement that asks the database for information or instructs it to change.</dd>
+    <dt>Regular expression</dt><dd>A pattern used to match strings.</dd>
+    <dt>Session</dt><dd>A server-side mechanism for remembering data about a visitor across multiple pages.</dd>
+    <dt>SQL</dt><dd>Structured Query Language — the language used to communicate with MySQL.</dd>
+    <dt>String</dt><dd>A piece of text, written between quotation marks.</dd>
+    <dt>Template</dt><dd>A file containing boilerplate used to create other files.</dd>
+    <dt>Variable</dt><dd>A named container that holds a value.</dd>
+    <dt>Web server</dt><dd>A computer that stores web pages and serves them to browsers.</dd>
+    <dt>Web service</dt><dd>A program that returns structured data (JSON or XML) over HTTP.</dd>
+    <dt>XAMPP</dt><dd>An all-in-one installer for Apache, MySQL, PHP, and phpMyAdmin.</dd>
+    <dt>XML</dt><dd>Extensible Markup Language — a text format for structured data, an alternative to JSON.</dd>
+  </dl>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Thirty</button>
+    <button class="nav-button" data-nav="next">A Note for the Reader →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     BACK COVER
+     ============================================================ -->
+<section class="book-page cover-page back-cover" id="back">
+  <div class="cover-content">
+    <p class="cover-series">The Journey Ends — and Begins</p>
+    <h1>You Are a Web Developer Now</h1>
+    <p class="cover-subtitle">Not because you finished a book — but because you started making things.</p>
+    <p class="closing-line">Keep building. Keep breaking. Keep learning.</p>
+
+    <div class="cover-note" style="max-width: 460px; margin-top: 30px;">
+      This little book was refactored from <em>PHP, MySQL, JavaScript &amp; HTML5 All-in-One For Dummies</em>
+      by Steve Suehring and Janet Valade, with deep gratitude for its clarity and its
+      hands-on spirit. All mistakes in the retelling are the adapter's own.
+    </div>
+
+    <div class="cover-credit">
+      Refactored &amp; illustrated by<br>
+      <a href="https://agunechemba.name.ng" target="_blank" rel="noopener">Agunechemba Ekene</a>
+    </div>
+
+    <div class="book-nav" style="border-top: none; margin-top: 24px;">
+      <button class="nav-button" data-nav="first">↺ Begin Again</button>
+    </div>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
