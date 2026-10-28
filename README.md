@@ -65,8 +65,6 @@ To run it, simply open `index.html` in any modern browser.
 
 This book is meant to be read with your fingers on the keyboard. Type every example into a text editor. Save it. Reload the browser. Break it. Fix it. Make it your own. The loop — *edit, save, reload, repeat* — is the whole secret of web development, and no book can do it for you. Every programmer, every day, writes mistakes. That is how we learn.
 
-
-# [READ BOOK](https://agunechemba.name.ng/PMJH/)
 ---
 
 *Keep building. Keep breaking. Keep learning.*
